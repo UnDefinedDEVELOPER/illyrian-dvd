@@ -1,0 +1,129 @@
+---
+import Button from "./Button.svelte";
+import TextLogo from "./TextLogo.svelte";
+---
+
+<div id="hero-card">
+    <div class="bg">
+        <div
+            class="hero-content"
+            class="flex w-full h-full justify-center gap-4 ml-6"
+        >
+            <div class="text flex flex-col h-full justify-center">
+                <div class="title flex flex-col gap-6 mb-6">
+                    <!-- <h1 class="m-0 p-0 leading-10">ILLYRIAN</h1>
+                    <h2>DEVELOPMENT | VIDEO | DESIGN</h2> -->
+                    <TextLogo />
+                </div>
+                <p class="mb-6">
+                    <strong>ILLYRIAN D.V.D.</strong> is the perfect solution if you
+                    want high quality work in the field of visual content creation
+                    and web development. This portfolio itself is a showcase of my
+                    skills and previous work.
+                    <br /><br />
+                    Would you like to chat? Feel free to send me a message and I'll
+                    respond in no time!
+                </p>
+                <div class="cta-button w-1/2">
+                    <Button
+                        bg="var(--secondary)"
+                        color="var(--primary)"
+                        text="Contact me"
+                        radius="3rem"
+                        uppercase={true}
+                        bold={true}
+                        client:load
+                    />
+                </div>
+            </div>
+            <div class="logo">
+                <img src="/logo.png" width="650" height="720" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #hero-card {
+        height: 100%;
+
+        .bg {
+            height: 100%;
+            position: relative;
+            border-radius: 8rem;
+            background-image: url("/hero_bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    90deg,
+                    #161411 0%,
+                    rgba(22, 20, 17, 0) 51.56%
+                );
+                z-index: 3;
+                border-radius: 8rem;
+            }
+        }
+
+        .hero-content {
+            height: 100%;
+            padding: 4rem 8rem;
+            border-radius: 8rem;
+            position: relative;
+            z-index: 5;
+            isolation: isolate;
+            mix-blend-mode: normal;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 6%;
+            gap: 2rem;
+
+            .text *,
+            .logo * {
+                z-index: 100;
+            }
+
+            .text,
+            .logo {
+                height: 100%;
+            }
+
+            .text {
+                width: 40%;
+                h1 {
+                    font-size: 6.8rem;
+                    font-family: "Righteous", sans-serif;
+                }
+
+                h2 {
+                    font-size: 1.675rem;
+                    font-weight: 200;
+                }
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 300;
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .logo img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+</style>

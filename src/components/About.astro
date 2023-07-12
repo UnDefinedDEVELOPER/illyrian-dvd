@@ -1,0 +1,106 @@
+---
+import Button from "./Button.svelte";
+---
+
+<div id="about-card">
+    <div class="flex w-full h-full justify-center items-center gap-12">
+        <div class="text">
+            <div class="title">
+                <h2>Hi, I'm Muhammed</h2>
+                <h1>the ILLYRIAN</h1>
+            </div>
+            <p>
+                This brand (and this website) is created with a purpose to
+                develop great solutions, solve problems and do high-quality work
+                for my clients. Illyrian DVD showcases how I can help you grow
+                your business, promote your brand and develop excellent
+                products.<br /><br />I'm a skilled Front-End Developer and
+                Visual Content Creator, as I see both of these fields as
+                necessarily interconnected. Consequently, I'm offering a unique
+                fusion of digital creativity and technicality necessary to make
+                your business shine!<br /><br />Check out my work and skills
+                down below. If you have any questions or you'd like to chat -
+                contact me!
+            </p>
+            <div class="flex gap-3 w-2/3">
+                <Button
+                    bg="var(--primary)"
+                    color="#fff"
+                    text="Contact"
+                    radius="1.43rem"
+                    uppercase={false}
+                    bold={false}
+                    client:load
+                />
+                <Button
+                    bg="var(--primary)"
+                    color="#fff"
+                    text="Download CV"
+                    radius="1.43rem"
+                    uppercase={false}
+                    bold={false}
+                    client:load
+                />
+            </div>
+        </div>
+        <div class="img flex flex-col justify-center">
+            <img class="me_pic" src="/me_pic.png" width="420" height="438" />
+            <img
+                class="logo"
+                src="/full_logo_white.png"
+                width="420"
+                height="216"
+            />
+        </div>
+    </div>
+</div>
+
+<style>
+    #about-card {
+        height: 80vh;
+        width: 100%;
+        background: linear-gradient(90deg, #f2e2bd 40.1%, #2f1b00 100%);
+        border-radius: 8rem;
+
+        .text {
+            width: 45%;
+
+            h1,
+            h2 {
+                width: 42.2rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 400;
+                line-height: 1;
+                text-align: end;
+                padding-right: 5px;
+            }
+
+            h1 {
+                line-height: 0.75;
+                font-size: 7rem;
+                font-family: "Righteous", sans-serif;
+            }
+            p {
+                margin: 2rem 0;
+            }
+        }
+
+        .img {
+            height: 100%;
+
+            img.me_pic {
+                height: 60%;
+                width: auto;
+                border-radius: 110px;
+                filter: drop-shadow(-5px 5px 25px rgba(0, 0, 0, 0.5));
+            }
+
+            img.logo {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,63 @@
+---
+import "@fontsource/righteous";
+import "@fontsource-variable/montserrat";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>illyrian DVD</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--primary: #161411;
+		--darker: #100e0c;
+		--secondary: #f2e2bd;
+		--accent-gradient: linear-gradient(90deg, #f2e2bd 40.1%, #161411 120%);
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html {
+		font-size: 16px;
+		background-color: var(--primary);
+	}
+	body {
+		font-family: "Montserrat", sans-serif;
+		min-height: 95vh;
+		position: relative;
+		overflow: hidden;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+			opacity: 0.3;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: var(--primary);
+			border-radius: 1rem;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--secondary);
+			border-radius: 1rem;
+		}
+	}
+	code {
+		font-family: monospace;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+</style>
