@@ -1,15 +1,12 @@
 ---
-import Button from "./Button.svelte";
-import TextLogo from "./TextLogo.svelte";
+import Button from "../components/client/Button.svelte";
+import TextLogo from "../components/assets/TextLogo.svelte";
 ---
 
 <div id="hero-card">
     <div class="bg">
-        <div
-            class="hero-content"
-            class="flex w-full h-full justify-center gap-4 ml-6"
-        >
-            <div class="text flex flex-col h-full justify-center">
+        <div class="hero-content" class="flex w-full h-full gap-4">
+            <div class="text flex flex-col h-full">
                 <div class="title flex flex-col gap-6 mb-6">
                     <!-- <h1 class="m-0 p-0 leading-10">ILLYRIAN</h1>
                     <h2>DEVELOPMENT | VIDEO | DESIGN</h2> -->
@@ -17,14 +14,16 @@ import TextLogo from "./TextLogo.svelte";
                 </div>
                 <p class="mb-6">
                     <strong>ILLYRIAN D.V.D.</strong> is the perfect solution if you
-                    want high quality work in the field of visual content creation
-                    and web development. This portfolio itself is a showcase of my
-                    skills and previous work.
+                    want high quality work in the field of <strong
+                        class="uppercase font-black"
+                        >visual content creation and web development.</strong
+                    > This portfolio itself is a showcase of my skills and previous
+                    work.
                     <br /><br />
                     Would you like to chat? Feel free to send me a message and I'll
                     respond in no time!
                 </p>
-                <div class="cta-button w-1/2">
+                <div class="cta-button">
                     <Button
                         bg="var(--secondary)"
                         color="var(--primary)"
@@ -50,7 +49,6 @@ import TextLogo from "./TextLogo.svelte";
         .bg {
             height: 100%;
             position: relative;
-            border-radius: 8rem;
             background-image: url("/hero_bg.png");
             background-size: cover;
             background-repeat: no-repeat;
@@ -70,53 +68,90 @@ import TextLogo from "./TextLogo.svelte";
                     rgba(22, 20, 17, 0) 51.56%
                 );
                 z-index: 3;
-                border-radius: 8rem;
             }
         }
 
         .hero-content {
             height: 100%;
             padding: 4rem 8rem;
-            border-radius: 8rem;
             position: relative;
             z-index: 5;
             isolation: isolate;
             mix-blend-mode: normal;
             color: #fff;
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-left: 6%;
-            gap: 2rem;
+
+            @media (max-width: 1300px) {
+                padding: 2rem 4rem;
+                align-items: start;
+            }
+
+            @media (max-width: 1000px) {
+                padding: 2rem 2rem;
+                align-items: start;
+            }
 
             .text *,
             .logo * {
                 z-index: 100;
             }
 
-            .text,
-            .logo {
-                height: 100%;
-            }
-
             .text {
-                width: 40%;
-                h1 {
-                    font-size: 6.8rem;
-                    font-family: "Righteous", sans-serif;
+                width: 60%;
+                height: 100%;
+                justify-content: center;
+                line-height: 1.5;
+
+                @media (max-width: 1000px) {
+                    width: 70%;
+                    justify-content: end;
+                }
+                @media (max-width: 500px) {
+                    width: 90%;
+                    justify-content: end;
+                    /* letter-spacing: 0.5px; */
                 }
 
-                h2 {
-                    font-size: 1.675rem;
-                    font-weight: 200;
+                .title {
+                    width: 80%;
                 }
                 p {
-                    font-size: 1.25rem;
+                    font-size: 1.175rem;
                     font-weight: 300;
 
                     strong {
-                        font-weight: 700;
+                        font-weight: 900;
+                        transition: 0.5s all ease-in;
+                        cursor: default;
+
+                        &:hover {
+                            background-color: var(--secondary);
+                            color: #000;
+                        }
                     }
+                }
+
+                .cta-button {
+                    width: 80%;
+                    @media (max-width: 1000px) {
+                        max-width: auto;
+                        width: 80%;
+                    }
+                }
+            }
+
+            .logo {
+                position: absolute;
+                bottom: 2rem;
+                right: 2rem;
+                height: 200px;
+                width: auto;
+
+                @media (max-width: 1000px) {
+                    top: 1rem;
+                    right: 1rem;
+                    height: 80px;
                 }
             }
 

@@ -1,9 +1,17 @@
 ---
 import "@fontsource/righteous";
-import "@fontsource-variable/montserrat";
+/* import "@fontsource-variable/montserrat"; */
+import "@fontsource/montserrat/100.css";
+import "@fontsource/montserrat/200.css";
+import "@fontsource/montserrat/300.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/500.css";
+import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/800.css";
+import "@fontsource/montserrat/900.css";
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -32,12 +40,19 @@ import "@fontsource-variable/montserrat";
 	html {
 		font-size: 16px;
 		background-color: var(--primary);
+		@media (max-width: 1000px) {
+			font-size: 14px;
+		}
+		@media (max-width: 500px) {
+			font-size: 12px;
+		}
 	}
 	body {
 		font-family: "Montserrat", sans-serif;
-		min-height: 95vh;
 		position: relative;
 		overflow: hidden;
+		height: auto;
+		min-height: 95vh;
 
 		&::-webkit-scrollbar {
 			width: 10px;
@@ -59,5 +74,8 @@ import "@fontsource-variable/montserrat";
 	a {
 		color: #fff;
 		text-decoration: none;
+	}
+	strong {
+		font-weight: 900;
 	}
 </style>

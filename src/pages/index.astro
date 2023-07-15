@@ -1,16 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import HeroHome from "../components/HeroHome.astro";
-import About from "../components/About.astro";
+import HeroHome from "../cards/HeroHome.astro";
+import AboutHome from "../cards/AboutHome.astro";
+import DevHome from "../cards/DevHome.astro";
+import Header from "../components/Header.astro";
 ---
 
+<script>
+	const height = window.innerHeight;
+	console.log(height);
+</script>
+
 <BaseLayout>
+	<Header />
 	<MainLayout>
-		<div class="scroll flex flex-col gap-16">
+		<div class="scroll">
 			<section><HeroHome /></section>
-			<section><About /></section>
-			<section><HeroHome /></section>
+			<section><AboutHome /></section>
+			<section><DevHome /></section>
 			<section><HeroHome /></section>
 			<section><HeroHome /></section>
 			<section><HeroHome /></section>
@@ -22,20 +30,24 @@ import About from "../components/About.astro";
 <style>
 	.scroll {
 		overflow: auto;
-		flex: none;
 		overflow: auto;
-		height: 90vh;
+		height: 95vh;
 		scroll-snap-type: y mandatory;
 		scroll-behavior: smooth;
 
 		& > section {
 			scroll-snap-align: start;
 			scroll-snap-stop: always;
+			overflow: hidden;
 		}
 
 		&::-webkit-scrollbar {
 			width: 10px;
 			opacity: 0.3;
+
+			@media (max-width: 1000px) {
+				width: 3px;
+			}
 		}
 
 		&::-webkit-scrollbar-track {
@@ -49,16 +61,25 @@ import About from "../components/About.astro";
 	}
 	section {
 		/* margin-bottom: 140px; */
-		height: 80vh;
+		height: 92%;
 		width: 90%;
 		margin: auto;
+		margin-bottom: 8%;
 		background-color: var(--primary);
 		border-radius: 8rem;
 		transition: 0.5s all ease-in;
 		box-shadow: 0 10px 0px rgba(0, 0, 0, 0);
+		position: relative;
 
 		&:hover {
-			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+		}
+
+		@media (max-width: 1440px) {
+			height: 85%;
+			margin-bottom: 15%;
+			width: 95%;
+			border-radius: 2rem;
 		}
 	}
 </style>

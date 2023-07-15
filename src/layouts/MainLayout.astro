@@ -1,22 +1,8 @@
 ---
 ---
 
-<main class="">
-    <header>
-        <h1>ILLYRIAN</h1>
-        <nav>
-            <a href="/development">DEV</a>
-            <a href="/video">VIDEO</a>
-            <a href="/design">DESIGN</a>
-        </nav>
-        <div class="static-nav">
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
-        </div>
-    </header>
-    <div class="content">
-        <slot />
-    </div>
+<main class="content">
+    <slot />
     <!-- <div class="frame">
         <div class="scroller">
             
@@ -25,64 +11,12 @@
 </main>
 
 <style>
-    main {
-        height: auto;
+    main.content {
+        height: 100%;
         position: relative;
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-            width: 85%;
-            margin: 1rem auto 2.5rem auto;
-            padding: 0 5%;
-            border-radius: 4rem;
-            position: sticky;
-            top: 1rem;
-            color: #fff;
-            z-index: 100;
-            background-color: var(--primary);
-            transition: 0.2s all ease-in;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-
-            &:hover {
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
-            }
-
-            h1 {
-                font-family: "Righteous", sans-serif;
-                font-size: 2.5rem;
-                font-weight: 400;
-            }
-
-            nav,
-            .static-nav {
-                display: flex;
-                gap: 2rem;
-
-                a {
-                    font-size: 1.875rem;
-                    font-weight: 400;
-                    transition: 0.25s all ease-in;
-                    background-color: var(--primary);
-
-                    &:hover {
-                        color: var(--primary);
-                        background-color: #fff;
-                    }
-                }
-            }
-        }
-
-        .content {
-            height: auto;
-            width: 100%;
-            margin: auto;
-
-            overflow: hidden;
-            /* overflow: visible; */
-        }
+        width: 100%;
+        margin: auto;
+        /* overflow: hidden; */
 
         .frame {
             height: 85vh;

@@ -14,3 +14,10 @@
         fill="white"
     />
 </svg>
+
+<style>
+    svg {
+        width: 100%;
+        height: auto;
+    }
+</style>

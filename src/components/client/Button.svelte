@@ -6,7 +6,7 @@
     export let bold: boolean | undefined;
     export let uppercase: boolean | undefined;
 
-    console.log(bg, color, text, bold, uppercase);
+    /* console.log(bg, color, text, bold, uppercase); */
 </script>
 
 <div
@@ -19,10 +19,10 @@
 </div>
 
 <!-- style="background-color: {bg}; color: {color}; border-radius: {radius}" -->
-<style define:vars={{ bg, color }}>
+<style lang="postcss">
     button {
         padding: 0.675rem 1rem;
-        font-size: 1.5rem;
+        font-size: 1.5em;
         width: 100%;
         background-color: var(--bg-color);
         color: var(--color);
@@ -34,11 +34,28 @@
             background-color: var(--color);
             color: var(--bg-color);
         }
+
+        @media (max-width: 1440px) {
+            padding: 0.5em;
+            font-size: 1.25em;
+        }
+        @media (max-width: 768px) {
+            padding: 0.5em;
+            font-size: 1.175em;
+        }
+        @media (max-width: 300px) {
+            padding: 0.5em;
+            font-size: 1em;
+        }
     }
 
     .bold {
         font-weight: 800;
-        font-size: 1.75rem;
+        font-size: 1.75em;
+
+        @media (max-width: 1440px) {
+            font-size: 1.25em;
+        }
     }
 
     .uppercase {

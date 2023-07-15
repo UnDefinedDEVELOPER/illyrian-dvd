@@ -1,0 +1,59 @@
+<header>
+    <h1>ILLYRIAN</h1>
+    <nav>
+        <a href="/development">DEV</a>
+        <a href="/video">VIDEO</a>
+        <a href="/design">DESIGN</a>
+    </nav>
+    <div class="static-nav">
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</header>
+
+<style>
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        margin: 1rem auto;
+        padding: 0 5%;
+        position: sticky;
+        color: #fff;
+        z-index: 100;
+        overflow: hidden;
+        /* background-color: var(--primary); */
+        transition: 0.2s all ease-in;
+        /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+
+        &:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+        } */
+
+        h1 {
+            font-family: "Righteous", sans-serif;
+            font-size: 2rem;
+            font-weight: 400;
+        }
+
+        nav,
+        .static-nav {
+            display: flex;
+            gap: 1.5rem;
+
+            a {
+                font-size: 1.25rem;
+                font-weight: 300;
+                transition: 0.25s all ease-in;
+                /* background-color: var(--primary); */
+
+                &:hover {
+                    color: var(--primary);
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+</style>
