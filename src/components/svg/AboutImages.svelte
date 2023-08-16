@@ -6,9 +6,9 @@
 
 <div class="img flex flex-col justify-center items-center gap-4">
     <img class="me_pic" src="/me_pic.png" width="420" height="438" />
-    {#if width > 1700}
+    <!-- {#if width > 1700}
         <img class="logo" src="/full_logo_white.png" width="420" height="216" />
-    {/if}
+    {/if} -->
 </div>
 
 <style lang="postcss">
@@ -16,6 +16,9 @@
         width: 40%;
         height: 100%;
 
+        @media (min-width: 1441px) {
+            min-height: 350px;
+        }
         @media (max-width: 1440px) {
             flex-direction: row;
             justify-content: flex-end;

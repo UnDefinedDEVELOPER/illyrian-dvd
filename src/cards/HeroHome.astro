@@ -14,10 +14,12 @@ import TextLogo from "../components/assets/TextLogo.svelte";
                 </div>
                 <p class="mb-6">
                     <strong>ILLYRIAN D.V.D.</strong> is the perfect solution if you
-                    want high quality work in the field of <strong
+                    want high quality work in the field of <!-- <strong
                         class="uppercase font-black"
-                        >visual content creation and web development.</strong
-                    > This portfolio itself is a showcase of my skills and previous
+                        > -->visual
+                    content creation and web development.<!-- </strong
+                    > -->
+                    This portfolio itself is a showcase of my skills and previous
                     work.
                     <br /><br />
                     Would you like to chat? Feel free to send me a message and I'll
@@ -62,12 +64,21 @@ import TextLogo from "../components/assets/TextLogo.svelte";
                 left: 0;
                 width: 100%;
                 height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
                 background: linear-gradient(
                     90deg,
                     #161411 0%,
-                    rgba(22, 20, 17, 0) 51.56%
+                    rgba(242, 226, 189, 0) 51.56%
                 );
                 z-index: 3;
+
+                @media (max-width: 500px) {
+                    background: linear-gradient(
+                        to bottom,
+                        #161411 -20%,
+                        rgba(242, 226, 189, 0) 51.56%
+                    );
+                }
             }
         }
 
@@ -82,12 +93,16 @@ import TextLogo from "../components/assets/TextLogo.svelte";
             display: flex;
             align-items: center;
 
+            @media (max-width: 1440px) {
+                padding-top: 2rem;
+            }
+
             @media (max-width: 1300px) {
                 padding: 2rem 4rem;
                 align-items: start;
             }
 
-            @media (max-width: 1000px) {
+            @media (max-width: 1024px) {
                 padding: 2rem 2rem;
                 align-items: start;
             }
@@ -103,7 +118,7 @@ import TextLogo from "../components/assets/TextLogo.svelte";
                 justify-content: center;
                 line-height: 1.5;
 
-                @media (max-width: 1000px) {
+                @media (max-width: 1024px) {
                     width: 70%;
                     justify-content: end;
                 }
@@ -117,11 +132,12 @@ import TextLogo from "../components/assets/TextLogo.svelte";
                     width: 80%;
                 }
                 p {
-                    font-size: 1.175rem;
+                    font-size: 1.25rem;
                     font-weight: 300;
+                    line-height: normal;
 
                     strong {
-                        font-weight: 900;
+                        font-weight: 700;
                         transition: 0.5s all ease-in;
                         cursor: default;
 
@@ -134,7 +150,7 @@ import TextLogo from "../components/assets/TextLogo.svelte";
 
                 .cta-button {
                     width: 80%;
-                    @media (max-width: 1000px) {
+                    @media (max-width: 1024px) {
                         max-width: auto;
                         width: 80%;
                     }
@@ -148,9 +164,15 @@ import TextLogo from "../components/assets/TextLogo.svelte";
                 height: 200px;
                 width: auto;
 
-                @media (max-width: 1000px) {
-                    top: 1rem;
+                @media (max-width: 1024px) {
+                    top: 3rem;
                     right: 1rem;
+                    height: 80px;
+                }
+
+                @media (max-width: 500px) {
+                    top: 4.5rem;
+                    right: 1.5rem;
                     height: 80px;
                 }
             }

@@ -5,17 +5,25 @@
     export let radius: string | undefined;
     export let bold: boolean | undefined;
     export let uppercase: boolean | undefined;
+    export let submit: boolean;
 
     /* console.log(bg, color, text, bold, uppercase); */
 </script>
 
 <div
-    class="w-full h-full"
+    class="w-full h-auto"
     style="--bg-color: {bg}; --color: {color}; --radius: {radius}"
 >
-    <button class="{bold ? 'bold' : ''} {uppercase ? 'uppercase' : ''}"
-        >{text}</button
+    <button
+        type={submit ? "submit" : "button"}
+        class="{bold ? 'bold' : ''} {uppercase ? 'uppercase' : ''}"
     >
+        {#if text == ""}
+            <slot />
+        {:else}
+            {text}
+        {/if}
+    </button>
 </div>
 
 <!-- style="background-color: {bg}; color: {color}; border-radius: {radius}" -->

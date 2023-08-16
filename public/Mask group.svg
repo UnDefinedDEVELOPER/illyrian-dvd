@@ -4,40 +4,40 @@
 </mask>
 <g mask="url(#mask0_244_56)">
 <g opacity="0.5" filter="url(#filter0_f_244_56)">
-<ellipse cx="1262.11" cy="407.203" rx="836.203" ry="923.108" transform="rotate(-90 1262.11 407.203)" fill="url(#paint0_linear_244_56)"/>
+<ellipse cx="2013.11" cy="491.203" rx="836.203" ry="923.108" transform="rotate(-90 2013.11 491.203)" fill="url(#paint0_linear_244_56)"/>
 </g>
 <g opacity="0.5" filter="url(#filter1_f_244_56)">
-<ellipse cx="0.499976" cy="3361.5" rx="558.5" ry="616.5" transform="rotate(-90 0.499976 3361.5)" fill="url(#paint1_linear_244_56)"/>
+<ellipse cx="-245.5" cy="3277.5" rx="558.5" ry="616.5" transform="rotate(-90 -245.5 3277.5)" fill="url(#paint1_linear_244_56)"/>
 </g>
 <g opacity="0.5" filter="url(#filter2_f_244_56)">
-<ellipse cx="1334.11" cy="6314.2" rx="836.203" ry="923.108" transform="rotate(-90 1334.11 6314.2)" fill="url(#paint2_linear_244_56)"/>
+<ellipse cx="1903.11" cy="6091.2" rx="836.203" ry="923.108" transform="rotate(-90 1903.11 6091.2)" fill="url(#paint2_linear_244_56)"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_f_244_56" x="-661" y="-1429" width="3846.22" height="3672.41" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_244_56" x="90" y="-1345" width="3846.22" height="3672.41" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="500" result="effect1_foregroundBlur_244_56"/>
 </filter>
-<filter id="filter1_f_244_56" x="-1616" y="1803" width="3233" height="3117" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_f_244_56" x="-1862" y="1719" width="3233" height="3117" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="500" result="effect1_foregroundBlur_244_56"/>
 </filter>
-<filter id="filter2_f_244_56" x="-589" y="4478" width="3846.22" height="3672.41" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter2_f_244_56" x="-20" y="4255" width="3846.22" height="3672.41" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="500" result="effect1_foregroundBlur_244_56"/>
 </filter>
-<linearGradient id="paint0_linear_244_56" x1="1675.77" y1="445.889" x2="537.377" y2="538.945" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_244_56" x1="2426.77" y1="529.889" x2="1288.38" y2="622.945" gradientUnits="userSpaceOnUse">
 <stop stop-color="#433A27"/>
 <stop offset="1" stop-color="#C1A878"/>
 </linearGradient>
-<linearGradient id="paint1_linear_244_56" x1="276.786" y1="3387.34" x2="-483.547" y2="3449.49" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_244_56" x1="30.7861" y1="3303.34" x2="-729.547" y2="3365.49" gradientUnits="userSpaceOnUse">
 <stop stop-color="#433A27"/>
 <stop offset="1" stop-color="#C1A878"/>
 </linearGradient>
-<linearGradient id="paint2_linear_244_56" x1="1747.77" y1="6352.89" x2="609.377" y2="6445.95" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_244_56" x1="2316.77" y1="6129.89" x2="1178.38" y2="6222.95" gradientUnits="userSpaceOnUse">
 <stop stop-color="#433A27"/>
 <stop offset="1" stop-color="#C1A878"/>
 </linearGradient>
