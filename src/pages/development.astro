@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.svelte";
 import HeroHome from "../cards/home/HeroHome.astro";
+import HeroDev from "../cards/dev/HeroDev.astro";
 import AboutHome from "../cards/home/AboutHome.astro";
 import DevHome from "../cards/home/DevHome.astro";
 import VideoHome from "../cards/home/VideoHome.astro";
@@ -9,19 +10,24 @@ import DesignHome from "../cards/home/DesignHome.astro";
 import Testimonials from "../cards/Testimonials.astro";
 import Contact from "../cards/Contact.astro";
 import Header from "../components/Header.svelte";
+import ComingSoon from "../cards/dev/ComingSoon.astro";
+import PreviewDev from "../cards/dev/PreviewDev.astro";
 ---
 
 <BaseLayout>
   <MainLayout client:only="svelte">
     <Header client:only="svelte" />
     <div class="scroll">
-      <section><HeroHome /></section>
-      <section><AboutHome /></section>
-      <section><DevHome /></section>
-      <section><VideoHome /></section>
-      <section><DesignHome /></section>
-      <section><Testimonials /></section>
-      <section><Contact /></section>
+      <section><HeroDev /></section>
+      <section><ComingSoon /></section>
+      <section
+        style="background-image: url('/dev-hero-bg.svg');
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;"
+      >
+        <PreviewDev />
+      </section>
     </div>
   </MainLayout>
 </BaseLayout>
@@ -123,7 +129,7 @@ import Header from "../components/Header.svelte";
     }
   }
   section {
-    /* margin-bottom: 140px; */
+    background-color: #000;
     height: 90%;
     min-height: fit-content;
     width: 90%;
@@ -138,37 +144,15 @@ import Header from "../components/Header.svelte";
       box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
     }
 
-    /* @media (min-width: 1441px) {
-			min-height: 750px;
-			@media (max-height: 749px) {
-				scroll-snap-align: unset;
-				scroll-snap-stop: unset;
-			}
-		} */
-
     @media (max-width: 1440px) {
       width: 95%;
       height: 95%;
       border-radius: 2rem;
-      /* min-height: 650px;
-
-			@media (max-height: 649px) {
-				scroll-snap-align: unset;
-				scroll-snap-stop: unset;
-			} */
 
       & > div {
         padding-top: 3rem;
       }
     }
-
-    /* @media (max-width: 1024px) {
-			min-height: 760px;
-			@media (max-height: 759px) {
-				scroll-snap-align: unset;
-				scroll-snap-stop: unset;
-			}
-		}*/
 
     @media (max-width: 500px) {
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);

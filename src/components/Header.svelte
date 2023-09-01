@@ -1,6 +1,7 @@
 <script lang="ts">
     let width: number;
     let showMenu = false;
+    let activePage: any;
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -10,16 +11,23 @@
         ? "height: 100%; background-color: #161411"
         : "background-color: linear-gradient(rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);"}
 >
-    <h1>ILLYRIAN</h1>
+    <h1><a href="/">ILLYRIAN</a></h1>
     {#if width > 767}
         <nav>
-            <a href="/development">DEV</a>
-            <a href="/video">VIDEO</a>
-            <a href="/design">DESIGN</a>
+            <a
+                class={activePage == "development" ? "bolder" : ""}
+                href="/development">DEV</a
+            >
+            <a class={activePage == "video" ? "bolder" : ""} href="/video"
+                >VIDEO</a
+            >
+            <a class={activePage == "design" ? "bolder" : ""} href="/design"
+                >DESIGN</a
+            >
         </nav>
         <div class="static-nav">
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#about-card">ABOUT</a>
+            <a href="#contact-card">CONTACT</a>
         </div>
     {:else}
         <button

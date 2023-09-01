@@ -1,0 +1,42 @@
+---
+import Button from "../../components/client/Button.svelte";
+import TextLogo from "../../components/assets/TextLogo.svelte";
+import DownButton from "../../components/svg/DownButton.svelte";
+---
+
+<div id="hero-card">
+    <div class="hero-content">
+        <h1>😄 the rest of this website is coming soon 😄</h1>
+        <h1>
+            <strong>⬇️ but scroll down to see how it will look like ⬇️</strong>
+        </h1>
+    </div>
+</div>
+
+<style>
+    #hero-card {
+        height: 100%;
+        background-color: #000;
+        background-image: url("/dev-hero-bg.svg");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        .hero-content {
+            padding: 4rem;
+            height: 100%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 strong {
+                font-size: 2rem;
+                font-weight: 800;
+                text-align: center;
+            }
+        }
+    }
+</style>

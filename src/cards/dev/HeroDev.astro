@@ -1,0 +1,58 @@
+---
+import Button from "../../components/client/Button.svelte";
+import TextLogo from "../../components/assets/TextLogo.svelte";
+import DownButton from "../../components/svg/DownButton.svelte";
+---
+
+<div id="hero-card">
+  <div class="hero-content">
+    <h1 class="title"><strong>DEVELOPMENT</strong></h1>
+    <div class="subtitle">
+      <h2>Full-Stack Front End?</h2>
+      <h1>
+        <strong>That's how I do it!</strong>
+      </h1>
+    </div>
+  </div>
+  <div class="button">
+    <DownButton client:load />
+  </div>
+</div>
+
+<style>
+  #hero-card {
+    height: 100%;
+    background-color: #000;
+    background-image: url("/dev-bg.png");
+    background-size: 80%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .hero-content {
+      padding: 4rem;
+      height: 100%;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+      h1 strong {
+        font-size: 4rem;
+        font-weight: 800;
+      }
+      .subtitle {
+        line-height: 1.1;
+      }
+    }
+
+    .button {
+      position: absolute;
+      bottom: 4rem;
+      right: 7rem;
+    }
+  }
+</style>
