@@ -1,0 +1,253 @@
+---
+import Button from "../../components/client/Button.svelte";
+import TextLogo from "../../components/assets/TextLogo.svelte";
+import DownButton from "../../components/svg/DownButton.svelte";
+---
+
+<div id="projects-card">
+    <div class="projects-content flex flex-col justify-between">
+        <div class="scroller">
+            <div class="projects flex justify-center items-center">
+                <div
+                    class="project project1 flex justify-center items-center gap-10"
+                >
+                    <img
+                        src="/project1.png"
+                        alt="Portfolio site"
+                        width="736"
+                        height="582"
+                    />
+                    <div class="text flex flex-col justify-center">
+                        <p>Illyrian DVD</p>
+                        <h1><strong>PORTFOLIO</strong></h1>
+                        <div class="description">
+                            <p>
+                                The entire portfolio is an example of my
+                                approach to creating good-looking, fast and
+                                responsive websites.
+                            </p>
+                            <ul class="tech flex gap-4 items-center">
+                                <li><strong>ASTRO.JS</strong></li>
+                                <li><strong>SVELTE</strong></li>
+                                <li><strong>POSTCSS</strong></li>
+                            </ul>
+                        </div>
+                        <div class="cta-button w-1/3 h-16 mt-8">
+                            <Button
+                                bg="#fff"
+                                color="#000"
+                                text="Code"
+                                radius="32px"
+                                uppercase={false}
+                                bold={false}
+                                client:load
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="project project2 flex justify-center items-center gap-10"
+                >
+                    <img
+                        src="/project2.png"
+                        alt="Portfolio site"
+                        width="736"
+                        height="582"
+                    />
+                    <div class="text flex flex-col justify-center">
+                        <p>Bosna Association</p>
+                        <h1><strong>GENOCIDE ROADMAP</strong></h1>
+                        <div class="description">
+                            <p>
+                                “Genocide Roadmap” is an interactive platform
+                                that shows the series of the 90's war crimes and
+                                genocide in Bosnia.
+                            </p>
+                            <ul class="tech flex gap-4 items-center">
+                                <li><strong>SVELTEKIT</strong></li>
+                                <li><strong>SANITY.IO</strong></li>
+                                <li><strong>POSTCSS</strong></li>
+                                <li><strong>FIGMA</strong></li>
+                            </ul>
+                        </div>
+                        <div class="cta-button w-1/3 h-16 mt-8">
+                            <Button
+                                bg="#fff"
+                                color="#000"
+                                text="View"
+                                radius="32px"
+                                uppercase={false}
+                                bold={false}
+                                client:load
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="project project3 flex justify-center items-center gap-10"
+                >
+                    <img
+                        src="/project3.png"
+                        alt="Portfolio site"
+                        width="736"
+                        height="582"
+                    />
+                    <div class="text flex flex-col justify-center">
+                        <p>Chivalore</p>
+                        <h1><strong>PROSPERIST JOURNAL</strong></h1>
+                        <div class="description">
+                            <p><strong>*COMING SOON*</strong></p>
+                            <p>
+                                “Prosperist Journal” is a personal passion
+                                project of creating an outlet for my creative
+                                writing and philosophy posts.
+                            </p>
+                            <ul class="tech flex gap-4 items-center">
+                                <li><strong>VUE.JS</strong></li>
+                                <li><strong>NUXT.JS</strong></li>
+                                <li><strong>FIREBASE</strong></li>
+                            </ul>
+                        </div>
+                        <div class="cta-button w-1/3 h-16 mt-8">
+                            <Button
+                                bg="#fff"
+                                color="#000"
+                                text="Code"
+                                radius="32px"
+                                uppercase={false}
+                                bold={false}
+                                client:load
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center w-full">
+            <h1 class="title"><strong>PROJECTS</strong></h1>
+            <div class="caro-nav flex gap-16">
+                <button
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="30"
+                        viewBox="0 0 20 30"
+                        fill="none"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M15.9179 29.4034L0.700369 16.4403C-0.233457 15.6449 -0.233457 14.3551 0.70037 13.5597L15.9179 0.596611C16.8518 -0.198866 18.3658 -0.198866 19.2996 0.596611C20.2335 1.39209 20.2335 2.68181 19.2996 3.47729L5.7729 15L19.2996 26.5227C20.2335 27.3182 20.2335 28.6079 19.2996 29.4034C18.3658 30.1989 16.8518 30.1989 15.9179 29.4034Z"
+                            fill="white"></path>
+                    </svg></button
+                >
+                <button
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="30"
+                        viewBox="0 0 20 30"
+                        fill="none"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.08205 0.596608L19.2996 13.5597C20.2335 14.3551 20.2335 15.6449 19.2996 16.4403L4.08205 29.4034C3.14823 30.1989 1.6342 30.1989 0.700371 29.4034C-0.233455 28.6079 -0.233455 27.3182 0.700371 26.5227L14.2271 15L0.70037 3.47729C-0.233456 2.68181 -0.233456 1.39209 0.70037 0.596608C1.6342 -0.198869 3.14823 -0.198869 4.08205 0.596608Z"
+                            fill="white"></path>
+                    </svg></button
+                >
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #projects-card {
+        height: 100%;
+        background-color: #000;
+        background-image: url("/dev-skill-bg.svg");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        position: relative;
+
+        .projects-content {
+            padding: 4rem;
+            height: 100%;
+            color: #fff;
+
+            .scroller {
+                height: 90%;
+                width: 100%;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+
+                .projects {
+                    height: 100%;
+                    width: 300%;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    .project {
+                        width: 30%;
+                        height: 90%;
+                        scroll-snap-align: center;
+                        scroll-snap-stop: always;
+                        margin: 0 auto;
+
+                        img {
+                            border-radius: 20px;
+                            width: 60%;
+                            height: auto;
+                        }
+                        .text {
+                            width: 40%;
+
+                            & > p {
+                                font-size: 1.25rem;
+                                word-wrap: break-word;
+                            }
+                            & > h1 strong {
+                                line-height: 1;
+                                font-size: 2.5rem;
+                            }
+
+                            .description {
+                                margin-top: 2rem;
+                                padding: 2rem 0 2rem 2rem;
+                                border-left: #fff 4px solid;
+                                p {
+                                    font-size: 1.175rem;
+                                    margin-bottom: 1rem;
+                                }
+
+                                ul li {
+                                    font-size: 1.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            h1 strong {
+                height: 10%;
+                font-size: 4rem;
+                font-weight: 800;
+                @media (max-width: 1000px) {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .button {
+            position: absolute;
+            bottom: 4rem;
+            right: 7rem;
+        }
+    }
+</style>

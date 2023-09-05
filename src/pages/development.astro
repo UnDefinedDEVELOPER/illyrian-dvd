@@ -1,17 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.svelte";
-import HeroHome from "../cards/home/HeroHome.astro";
 import HeroDev from "../cards/dev/HeroDev.astro";
-import AboutHome from "../cards/home/AboutHome.astro";
-import DevHome from "../cards/home/DevHome.astro";
-import VideoHome from "../cards/home/VideoHome.astro";
-import DesignHome from "../cards/home/DesignHome.astro";
-import Testimonials from "../cards/Testimonials.astro";
-import Contact from "../cards/Contact.astro";
 import Header from "../components/Header.svelte";
-import ComingSoon from "../cards/dev/ComingSoon.astro";
-import PreviewDev from "../cards/dev/PreviewDev.astro";
+import SkillsDev from "../cards/dev/SkillsDev.astro";
+import ProjectsDev from "../cards/dev/ProjectsDev.astro";
+import Contact from "../cards/Contact.astro";
 ---
 
 <BaseLayout>
@@ -19,15 +13,17 @@ import PreviewDev from "../cards/dev/PreviewDev.astro";
     <Header client:only="svelte" />
     <div class="scroll">
       <section><HeroDev /></section>
-      <section><ComingSoon /></section>
+      <section><SkillsDev /></section>
+      <section><ProjectsDev /></section>
+      <section><Contact /></section>
+      <!-- <section><ComingSoon /></section>
       <section
         style="background-image: url('/dev-hero-bg.svg');
       background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;"
       >
-        <PreviewDev />
-      </section>
+        <PreviewDev /> -->
     </div>
   </MainLayout>
 </BaseLayout>
