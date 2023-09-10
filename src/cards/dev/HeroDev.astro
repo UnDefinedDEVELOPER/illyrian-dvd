@@ -6,16 +6,18 @@ import DownButton from "../../components/svg/DownButton.svelte";
 
 <div id="hero-card">
   <div class="hero-content">
-    <h1 class="title"><strong>DEVELOPMENT</strong></h1>
+    <strong><h1 class="title">DEVELOPMENT</h1></strong>
     <div class="subtitle">
-      <h2>Full-Stack Front End?</h2>
-      <h1>
-        <strong>That's how I do it!</strong>
-      </h1>
+      <div>
+        <h2>Full-Stack Front End?</h2>
+        <h1>
+          <strong>That's how I do it!</strong>
+        </h1>
+      </div>
+      <div class="button">
+        <DownButton client:load />
+      </div>
     </div>
-  </div>
-  <div class="button">
-    <DownButton client:load />
   </div>
 </div>
 
@@ -29,6 +31,15 @@ import DownButton from "../../components/svg/DownButton.svelte";
     background-repeat: no-repeat;
     position: relative;
 
+    /* @media (max-width: 1440pxpx) {
+      background-size: cover;
+    }
+ */
+    @media (max-width: 1440px) {
+      background-size: cover;
+      background-position: center;
+    }
+
     .hero-content {
       padding: 4rem;
       height: 100%;
@@ -37,22 +48,84 @@ import DownButton from "../../components/svg/DownButton.svelte";
       flex-direction: column;
       justify-content: space-between;
 
+      @media (max-width: 767px) {
+        padding: 4rem 2rem;
+      }
+
+      strong h1.title {
+        font-size: 4rem;
+        font-weight: 800;
+
+        @media (max-width: 1024px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 767px) {
+          font-size: 2.5rem;
+        }
+        @media (max-width: 320px) {
+          text-align: center;
+          font-size: 2rem;
+          padding-top: 2rem;
+        }
+      }
+
       h2 {
         font-size: 2.5rem;
+        @media (max-width: 1024px) {
+          font-size: 1.5rem;
+        }
+        @media (max-width: 767px) {
+          font-size: 1.25rem;
+        }
       }
       h1 strong {
         font-size: 4rem;
         font-weight: 800;
+
+        @media (max-width: 1024px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 767px) {
+          font-size: 2.5rem;
+        }
       }
       .subtitle {
         line-height: 1.1;
-      }
-    }
+        @media (max-width: 1024px) {
+          line-height: 1.25;
+        }
 
-    .button {
-      position: absolute;
-      bottom: 4rem;
-      right: 7rem;
+        @media (max-width: 767px) {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: start;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        @media (max-width: 320px) {
+          flex-direction: column-reverse;
+          align-items: start;
+        }
+
+        .button {
+          position: absolute;
+          bottom: 4rem;
+          right: 7rem;
+
+          @media (max-width: 1024px) {
+            bottom: 3.5rem;
+            right: 4rem;
+          }
+
+          @media (max-width: 767px) {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            left: auto;
+          }
+        }
+      }
     }
   }
 </style>

@@ -13,7 +13,7 @@ import Header from "../components/Header.svelte";
 
 <BaseLayout>
   <MainLayout client:only="svelte">
-    <Header client:only="svelte" />
+    <Header color="#fff" client:only="svelte" />
     <div class="scroll">
       <section><HeroHome /></section>
       <section><AboutHome /></section>
@@ -21,7 +21,7 @@ import Header from "../components/Header.svelte";
       <section><VideoHome /></section>
       <section><DesignHome /></section>
       <section><Testimonials /></section>
-      <section><Contact /></section>
+      <section><Contact color1="#A7A7A5" color2="#161411" /></section>
     </div>
   </MainLayout>
 </BaseLayout>
@@ -34,6 +34,7 @@ import Header from "../components/Header.svelte";
     position: relative;
     z-index: 1;
     height: 100%;
+    background-color: var(--primary);
 
     & > section {
       scroll-snap-align: center;

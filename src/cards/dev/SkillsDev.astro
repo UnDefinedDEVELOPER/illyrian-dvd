@@ -5,176 +5,170 @@ import DownButton from "../../components/svg/DownButton.svelte";
 ---
 
 <div id="skills-card">
-    <div class="skills-content flex flex-col justify-between">
-        <h1 class="title"><strong>SKILLS</strong></h1>
-        <div class="flex flex-col justify-evenly h-3/5">
-            <div class="skillset first-skillset flex justify-between w-full">
-                <h2 class="w-2/6">Concept & Design</h2>
-                <ul
-                    class="skills flex gap-4 justify-end items-center flex-wrap"
-                >
-                    <li>DRIBBLE</li>
-                    <li><strong>FIGMA</strong></li>
-                </ul>
-            </div>
-            <div class="skillset flex justify-between w-full">
-                <h2 class="w-2/6">Front-End Tech</h2>
-                <ul
-                    class="skills flex gap-4 justify-end items-center flex-wrap"
-                >
-                    <li><strong>POSTCSS</strong></li>
-                    <li><strong>TYPESCRIPT</strong></li>
-                    <li>REACT</li>
-                    <li>SVELTE</li>
-                    <li>VUE.JS</li>
-                </ul>
-            </div>
-            <div class="skillset flex justify-between w-full">
-                <h2 class="w-2/6">Content Solutions</h2>
-                <ul
-                    class="skills flex gap-4 justify-end items-center flex-wrap"
-                >
-                    <li><strong>SANITY.IO</strong></li>
-                    <li>FIREBASE</li>
-                    <li>WORDPRESS</li>
-                </ul>
-            </div>
-            <div class="skillset flex justify-between w-full">
-                <h2 class="w-2/6">Rendering Stack</h2>
-                <ul
-                    class="skills flex gap-4 justify-end items-center flex-wrap"
-                >
-                    <li><strong>SVELTEKIT</strong></li>
-                    <li>NEXT.JS</li>
-                    <li>NUXT.JS</li>
-                </ul>
-            </div>
-            <div class="skillset flex justify-between w-full">
-                <h2 class="w-2/6">Deployment</h2>
-                <ul
-                    class="skills flex gap-4 justify-end items-center flex-wrap"
-                >
-                    <li>NETLIFY</li>
-                    <li><strong>VERCEL</strong></li>
-                </ul>
-            </div>
-        </div>
-        <p class="text-4xl text-center">From Vision to Deployment</p>
+  <div class="skills-content flex flex-col justify-between">
+    <h1 class="title"><strong>SKILLS</strong></h1>
+    <div class="flex flex-col justify-evenly h-3/5">
+      <div class="skillset first-skillset flex justify-between w-full">
+        <h2 class="w-2/6">Concept & Design</h2>
+        <ul class="skills flex gap-4 justify-end items-center flex-wrap">
+          <li>DRIBBLE</li>
+          <li><strong>FIGMA</strong></li>
+        </ul>
+      </div>
+      <div class="skillset flex justify-between w-full">
+        <h2 class="w-2/6">Front-End Tech</h2>
+        <ul class="skills flex gap-4 justify-end items-center flex-wrap">
+          <li><strong>POSTCSS</strong></li>
+          <li><strong>TYPESCRIPT</strong></li>
+          <li>REACT</li>
+          <li>SVELTE</li>
+          <li>VUE.JS</li>
+        </ul>
+      </div>
+      <div class="skillset flex justify-between w-full">
+        <h2 class="w-2/6">Content Solutions</h2>
+        <ul class="skills flex gap-4 justify-end items-center flex-wrap">
+          <li><strong>SANITY.IO</strong></li>
+          <li>FIREBASE</li>
+          <li>WORDPRESS</li>
+        </ul>
+      </div>
+      <div class="skillset flex justify-between w-full">
+        <h2 class="w-2/6">Rendering Stack</h2>
+        <ul class="skills flex gap-4 justify-end items-center flex-wrap">
+          <li><strong>SVELTEKIT</strong></li>
+          <li>NEXT.JS</li>
+          <li>NUXT.JS</li>
+        </ul>
+      </div>
+      <div class="skillset flex justify-between w-full">
+        <h2 class="w-2/6">Deployment</h2>
+        <ul class="skills flex gap-4 justify-end items-center flex-wrap">
+          <li>NETLIFY</li>
+          <li><strong>VERCEL</strong></li>
+        </ul>
+      </div>
     </div>
+    <p class="text-4xl text-center">From Vision to Deployment</p>
+  </div>
 </div>
 
 <style>
-    #skills-card {
-        height: 100%;
-        background-color: #000;
-        background-image: url("/dev-skill-bg.svg");
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        position: relative;
+  #skills-card {
+    height: 100%;
+    background-color: #000;
+    background-image: url("/dev-skill-bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 
-        .skills-content {
-            padding: 4rem;
-            height: 100%;
-            color: #fff;
-
-            @media (max-width: 1000px) {
-                padding: 4rem 3rem;
-            }
-            @media (max-width: 767px) {
-                padding: 4rem 2rem 2rem 2rem;
-
-                .title {
-                    text-align: center;
-                }
-            }
-
-            @media (max-width: 320px) {
-                padding: 4rem 1rem 2rem 1rem;
-            }
-
-            & > .flex {
-                @media (max-width: 1000px) {
-                    height: 80%;
-                }
-            }
-
-            .skillset {
-                padding-bottom: 0.5rem;
-                border-bottom: 2px solid #fff;
-                align-items: end;
-
-                @media (max-width: 500px) {
-                    min-height: 15%;
-                    height: auto;
-
-                    &.first-skillset {
-                        min-height: auto;
-                        height: auto;
-                    }
-
-                    .skills {
-                        width: 50%;
-                    }
-                }
-
-                h2 {
-                    @media (max-width: 1000px) {
-                        font-size: 1.25rem;
-                    }
-
-                    @media (max-width: 320px) {
-                        font-size: 1rem;
-                    }
-                }
-
-                .skills {
-                    @media (max-width: 1000px) {
-                        gap: 0.5rem;
-
-                        li {
-                            font-size: 1.175rem;
-                        }
-                    }
-
-                    @media (max-width: 320px) {
-                        li {
-                            font-size: 1rem;
-                        }
-                    }
-                }
-            }
-
-            h2,
-            li {
-                font-size: 1.5rem;
-            }
-            h1 strong {
-                font-size: 4rem;
-                font-weight: 800;
-                @media (max-width: 1000px) {
-                    font-size: 3rem;
-                }
-            }
-            .subtitle {
-                line-height: 1.1;
-            }
-
-            p {
-                @media (max-width: 1000px) {
-                    font-size: 1.5rem;
-                }
-
-                @media (max-width: 500px) {
-                    font-size: 1.25rem;
-                }
-            }
-        }
-
-        .button {
-            position: absolute;
-            bottom: 4rem;
-            right: 7rem;
-        }
+    @media (max-width: 767px) {
+      background-image: url("/dev-skill-mobile-bg.svg");
     }
+
+    .skills-content {
+      padding: 4rem;
+      height: 100%;
+      color: #fff;
+
+      @media (max-width: 1000px) {
+        padding: 4rem 3rem;
+      }
+      @media (max-width: 767px) {
+        padding: 4rem 2rem 2rem 2rem;
+
+        .title {
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 320px) {
+        padding: 4rem 1rem 2rem 1rem;
+      }
+
+      & > .flex {
+        @media (max-width: 1000px) {
+          height: 80%;
+        }
+      }
+
+      .skillset {
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #fff;
+        align-items: end;
+
+        @media (max-width: 500px) {
+          min-height: 15%;
+          height: auto;
+
+          &.first-skillset {
+            min-height: auto;
+            height: auto;
+          }
+
+          .skills {
+            width: 50%;
+          }
+        }
+
+        h2 {
+          @media (max-width: 1000px) {
+            font-size: 1.25rem;
+          }
+
+          @media (max-width: 320px) {
+            font-size: 1rem;
+          }
+        }
+
+        .skills {
+          @media (max-width: 1000px) {
+            gap: 0.5rem;
+
+            li {
+              font-size: 1.175rem;
+            }
+          }
+
+          @media (max-width: 320px) {
+            li {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      h2,
+      li {
+        font-size: 1.5rem;
+      }
+      h1 strong {
+        font-size: 4rem;
+        font-weight: 800;
+        @media (max-width: 1000px) {
+          font-size: 3rem;
+        }
+      }
+      .subtitle {
+        line-height: 1.1;
+      }
+
+      p {
+        @media (max-width: 1000px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 500px) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .button {
+      position: absolute;
+      bottom: 4rem;
+      right: 7rem;
+    }
+  }
 </style>

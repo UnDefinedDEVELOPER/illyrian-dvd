@@ -1,9 +1,17 @@
 ---
 import FullLogo from "../components/assets/FullLogo.svelte";
 import Button from "../components/client/Button.svelte";
+
+/* export let color1: string = "#000";
+export let color2: string = "#463129"; */
+let { color1, color2, percent } = Astro.props;
+percent = "90%";
 ---
 
-<div id="contact-card">
+<div
+  id="contact-card"
+  style=`--color1: ${color1}; --color2: ${color2}; --percent: ${percent};`
+>
   <div class="content flex justify-center gap-16">
     <div class="left">
       <form
@@ -106,7 +114,12 @@ import Button from "../components/client/Button.svelte";
   #contact-card {
     height: 100%;
     width: 100%;
-    background: url("/contact-bg.svg") center/cover no-repeat;
+    /* background: url("/contact-bg.svg") center/cover no-repeat; */
+    background: linear-gradient(
+      180deg,
+      var(--color1) 0%,
+      var(--color2) var(--percent) /* #2e2c29 56.92%, */
+    );
     color: #fff;
 
     .content {
