@@ -1,0 +1,163 @@
+<div id="about-design">
+  <div class="about-content flex justify-evenly items-center gap-32">
+    <div class="left">
+      <p>
+        <strong>Good design is essential to the identity of the brand.</strong>
+      </p>
+      <p>
+        This website is the vision of my brand. Let's make yours shine as well!
+      </p>
+      <ul>
+        <li>UX/UI Design</li>
+        <li>Logos & Brand Identity</li>
+        <li>Banners & Posters</li>
+        <li>Social Media Design</li>
+      </ul>
+    </div>
+    <div class="right">
+      <img src="/col-logo-white.svg" alt="Illyrian DVD column logo" />
+    </div>
+  </div>
+</div>
+
+<style>
+  #about-design {
+    height: 100%;
+    width: 100%;
+    background-color: #aea08b;
+    box-shadow:
+      inset 200px 0px 200px #726148,
+      inset -200px -200px 200px #726148;
+    @media (max-width: 1024px) {
+      box-shadow:
+        inset 0px 0px 100px #726148,
+        inset -10px 0px 100px #726148;
+    }
+
+    display: flex;
+    flex-grow: 1;
+
+    .about-content {
+      padding: 4rem;
+      color: #fff;
+      width: 100%;
+      letter-spacing: 0.5px;
+
+      @media (max-width: 1300px) {
+        letter-spacing: initial;
+        gap: 0rem;
+      }
+      @media (max-width: 1024px) {
+        padding: 4rem 2rem;
+        gap: 4rem;
+      }
+      @media (max-width: 767px) {
+        flex-direction: column;
+        padding: 6rem 2rem 4rem 2rem;
+        gap: 2rem;
+      }
+
+      .left {
+        width: 50%;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          text-align: center;
+        }
+
+        p strong {
+          font-size: 2.25rem;
+          font-weight: 700;
+          line-height: normal;
+
+          @media (max-width: 1300px) {
+            font-size: 1.75rem;
+          }
+          @media (max-width: 500px) {
+            font-size: 1.25rem;
+            width: 90%;
+          }
+        }
+
+        p {
+          font-size: 2rem;
+          font-weight: 300;
+          @media (max-width: 1300px) {
+            font-size: 1.5rem;
+          }
+          @media (max-width: 767px) {
+            width: 70%;
+            margin: 0 auto;
+          }
+          @media (max-width: 500px) {
+            font-size: 1.25rem;
+            width: 90%;
+            margin-top: 1rem;
+          }
+        }
+
+        ul {
+          list-style: initial;
+          list-style-position: inside;
+          font-size: 2.25rem;
+          font-weight: 300;
+          line-height: 130%;
+          margin-top: 3rem;
+
+          @media (max-width: 1300px) {
+            font-size: 1.75rem;
+          }
+          @media (max-width: 500px) {
+            font-size: 1.25rem;
+          }
+
+          li {
+            padding-left: 2rem;
+
+            @media (max-width: 1300px) {
+              font-size: 1.5rem;
+            }
+
+            @media (max-width: 500px) {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .right {
+        width: auto;
+
+        @media (max-width: 767px) {
+          width: 100%;
+          height: 50%;
+        }
+
+        @media (max-width: 500px) {
+          width: 100%;
+          height: 40%;
+        }
+
+        img {
+          max-height: 540px;
+          width: auto;
+          padding-top: 2rem;
+
+          @media (max-width: 1300px) {
+            max-height: 450px;
+          }
+
+          @media (max-width: 1024px) {
+            max-height: 400px;
+          }
+
+          @media (max-width: 767px) {
+            height: 100%;
+            width: fit-content;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+</style>

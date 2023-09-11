@@ -12,10 +12,10 @@ import Contact from "../cards/Contact.astro";
   <MainLayout client:only="svelte">
     <Header color="#fff" client:only="svelte" />
     <div class="scroll">
-      <section><HeroDev client:load /></section>
+      <section><HeroDev /></section>
       <section><SkillsDev /></section>
       <section><ProjectsDev /></section>
-      <section><Contact color1="#000" color2="#463129" /></section>
+      <section><Contact color1="#000" color2="#463129" text="white" /></section>
     </div>
   </MainLayout>
 </BaseLayout>

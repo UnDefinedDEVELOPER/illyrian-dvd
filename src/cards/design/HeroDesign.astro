@@ -6,16 +6,18 @@ import DownButton from "../../components/svg/DownButton.svelte";
 
 <div id="hero-card">
   <div class="hero-content">
-    <h1 class="title"><strong>DESIGN</strong></h1>
+    <strong><h1 class="title">DESIGN</h1></strong>
     <div class="subtitle">
-      <h2>Pursuing digital excellence?</h2>
-      <h1>
-        <strong>I'm at your service!</strong>
-      </h1>
+      <div>
+        <h2>Pursuing digital excellence?</h2>
+        <h1>
+          <strong>I'm at your service!</strong>
+        </h1>
+      </div>
+      <div class="button">
+        <DownButton client:load />
+      </div>
     </div>
-  </div>
-  <div class="button">
-    <DownButton client:load />
   </div>
 </div>
 
@@ -28,31 +30,106 @@ import DownButton from "../../components/svg/DownButton.svelte";
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    box-shadow:
+      inset 100px 0px 200px #7a6c52,
+      inset -100px -100px 200px #7a6c52;
+    @media (max-width: 1024px) {
+      box-shadow:
+        inset 0px 0px 100px #7a6c52,
+        inset -10px 0px 100px #7a6c52;
+    }
 
     .hero-content {
       padding: 4rem;
       height: 100%;
-      color: #000;
+      color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
+      @media (max-width: 767px) {
+        padding: 4rem 2rem;
+      }
+
+      strong h1.title {
+        font-size: 4rem;
+        font-weight: 800;
+
+        @media (max-width: 1024px) {
+          font-size: 3rem;
+        }
+        /* @media (max-width: 767px) {
+          font-size: 2.5rem;
+        }*/
+        @media (max-width: 320px) {
+          text-align: center;
+          padding-top: 2rem;
+        }
+      }
+
       h2 {
         font-size: 2.5rem;
+        @media (max-width: 1024px) {
+          font-size: 1.5rem;
+        }
+        @media (max-width: 767px) {
+          font-size: 1.25rem;
+        }
       }
       h1 strong {
         font-size: 4rem;
         font-weight: 800;
+
+        @media (max-width: 1024px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 767px) {
+          font-size: 2.5rem;
+        }
       }
       .subtitle {
         line-height: 1.1;
+        @media (max-width: 1024px) {
+          line-height: 1.25;
+        }
+
+        @media (max-width: 767px) {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        @media (max-width: 320px) {
+          flex-direction: column-reverse;
+          align-items: flex-end;
+        }
+
+        .button {
+          position: absolute;
+          bottom: 4rem;
+          right: 7rem;
+
+          @media (max-width: 1024px) {
+            bottom: 3.5rem;
+            right: 4rem;
+          }
+
+          @media (max-width: 767px) {
+            position: relative;
+            bottom: auto;
+            right: auto;
+            left: auto;
+          }
+        }
       }
     }
 
-    .button {
+    /* .button {
       position: absolute;
       bottom: 4rem;
       right: 7rem;
-    }
+    } */
   }
 </style>

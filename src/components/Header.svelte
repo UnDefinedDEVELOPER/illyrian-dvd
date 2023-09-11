@@ -1,10 +1,14 @@
-<script lang="ts">
+<script>
   import { onMount } from "svelte";
 
-  let width: number;
+  let width;
   let showMenu = false;
-  let activePage: any;
-  export let color: string;
+  let activePage;
+  export let color;
+
+  onMount(() => {
+    document.querySelector(".scroll").scroll(0, 0);
+  });
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -27,7 +31,7 @@
       >
     </nav>
     <div class="static-nav">
-      <a href="#about-card">ABOUT</a>
+      <a href="/#about-card">ABOUT</a>
       <a href="#contact-card">CONTACT</a>
     </div>
   {:else}

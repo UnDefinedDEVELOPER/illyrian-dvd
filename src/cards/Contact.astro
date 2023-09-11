@@ -4,13 +4,13 @@ import Button from "../components/client/Button.svelte";
 
 /* export let color1: string = "#000";
 export let color2: string = "#463129"; */
-let { color1, color2, percent } = Astro.props;
+let { color1, color2, percent, text } = Astro.props;
 percent = "90%";
 ---
 
 <div
   id="contact-card"
-  style=`--color1: ${color1}; --color2: ${color2}; --percent: ${percent};`
+  style=`--color1: ${color1}; --color2: ${color2}; --percent: ${percent}; color: ${text}`
 >
   <div class="content flex justify-center gap-16">
     <div class="left">
@@ -21,12 +21,19 @@ percent = "90%";
       >
         <input type="text" name="name" placeholder="Name" />
         <input type="email" name="email" placeholder="Email" />
-        <input
+        <!-- <input
           type="text"
           class="message"
           name="message"
           placeholder="Message"
-        />
+        /> -->
+        <textarea
+          class="message"
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Message"></textarea>
         <div class="cta-button">
           <Button
             bg="#161411"
@@ -105,7 +112,7 @@ percent = "90%";
   <footer class="w-full flex justify-between items-center">
     <h1>CONTACT</h1>
     <div class="img flex h-full align-center">
-      <FullLogo width="350" height="180" color="white" client:load />
+      <FullLogo width="350" height="180" color={text} client:load />
     </div>
   </footer>
 </div>
@@ -120,7 +127,6 @@ percent = "90%";
       var(--color1) 0%,
       var(--color2) var(--percent) /* #2e2c29 56.92%, */
     );
-    color: #fff;
 
     .content {
       height: calc(100% - 200px);
@@ -169,14 +175,17 @@ percent = "90%";
           height: 65%;
         }
         form {
+          color: #000;
           @media (max-width: 767px) {
             justify-content: end;
           }
-          input {
+          input,
+          textarea {
             width: 100%;
             height: 20px;
             padding: 1.5rem 2rem;
             border-radius: 20px;
+            justify-self: flex-start;
 
             &::placeholder {
               color: #000;

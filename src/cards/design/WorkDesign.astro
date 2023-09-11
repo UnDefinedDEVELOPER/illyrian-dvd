@@ -1,0 +1,241 @@
+---
+import Button from "../../components/client/Button.svelte";
+import CaroNav from "../../components/client/CaroNav.svelte";
+---
+
+<div id="work-design">
+  <div class="work-content flex flex-col">
+    <div class="title flex justify-between w-full">
+      <strong><h1>PORTFOLIO</h1></strong>
+      <CaroNav client:load />
+    </div>
+    <div class="scroller">
+      <div class="projects flex justify-center items-center">
+        <div class="project project1 flex justify-evenly items-center gap-8">
+          <div class="col col-1 flex flex-col justify-center gap-8">
+            <img src="/chivalore-logo.png" alt="Chivalore logo" />
+            <img src="/journal-logo.png" alt="Journal logo" />
+          </div>
+          <div class="col col-2 flex flex-col justify-center gap-8">
+            <img src="/cool-logo.png" alt="cool-logo" />
+          </div>
+          <div class="col col-3 flex flex-col justify-center gap-8">
+            <img src="/imedia-concept.png" alt="imedia-concept" />
+            <img src="/icode-concept.png" alt="icode-concept" />
+            <img src="/istudio-concept.png" alt="istudio-concept" />
+          </div>
+        </div>
+        <div class="project project2 flex justify-center items-center gap-10">
+          <div class="col col-1 flex flex-col justify-center gap-8">
+            <img src="/poster.png" alt="poster" />
+          </div>
+          <div class="col col-2 flex flex-col justify-center gap-8">
+            <img src="/thumb-1.png" alt="thumb-1" />
+            <img src="/thumb-2.png" alt="thumb-2" />
+          </div>
+          <div class="col col-3 flex flex-col justify-center gap-8">
+            <img src="/thumb-3.png" alt="thumb-3" />
+            <img src="/screenshot.png" alt="screenshot" />
+          </div>
+        </div>
+        <div class="project project3 flex justify-center items-center gap-10">
+          <div class="col col-1 flex flex-col justify-center gap-8">
+            <img src="/project3.png" alt="project3" />
+          </div>
+          <div class="col col-2 flex flex-col justify-center gap-8">
+            <img src="/project2.png" alt="thumb-1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #work-design {
+    height: 100%;
+    width: 100%;
+    background-color: #aea08b;
+    box-shadow:
+      inset 200px 0px 200px #726148,
+      inset -200px -200px 200px #726148;
+    /* @media (max-width: 1024px) {
+      box-shadow:
+        inset 0px 0px 100px #726148,
+        inset -10px 0px 100px #726148;
+    } */
+
+    .work-content {
+      padding: 6rem 4rem;
+      color: #fff;
+      height: 100%;
+
+      .title {
+        padding: 0 4.5rem;
+
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+        }
+
+        strong h1 {
+          font-size: 4rem;
+          font-weight: 800;
+
+          @media (max-width: 1024px) {
+            font-size: 3rem;
+          }
+          /* @media (max-width: 767px) {
+          font-size: 2.5rem;
+        }*/
+          @media (max-width: 320px) {
+            text-align: center;
+            padding: 0;
+            padding-top: 2rem;
+          }
+        }
+      }
+
+      .scroller {
+        flex-grow: 1;
+        width: 100%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+
+        .projects {
+          height: 100%;
+          width: 400%;
+          display: flex;
+          justify-content: space-evenly;
+
+          .project {
+            width: 30%;
+            height: 90%;
+            max-width: 1200px;
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
+            margin: 0 auto;
+            overflow: hidden;
+
+            @media (max-width: 1500px) {
+              max-width: 1100px;
+            }
+            @media (max-width: 1300px) {
+              max-width: 1000px;
+            }
+            @media (max-width: 1200px) {
+              max-width: 900px;
+            }
+            @media (max-width: 1100px) {
+              max-width: 800px;
+            }
+            @media (max-width: 1024px) {
+              height: fit-content;
+              flex-wrap: wrap;
+              .col {
+                width: 50%;
+                height: fit-content;
+              }
+            }
+            @media (max-width: 767px) {
+              flex-direction: column-reverse;
+              gap: 1rem;
+              justify-content: center;
+              align-items: start;
+            }
+
+            @media (max-width: 500px) {
+              justify-content: center;
+            }
+
+            .col {
+              flex-grow: 1;
+              height: 100%;
+              width: 100%;
+              transition: 0.5s all ease-in-out;
+              overflow: visible;
+
+              @media (max-width: 1024px) {
+                height: fit-content;
+                width: fit-content;
+
+                img {
+                  height: fit-content;
+                  width: fit-content;
+                }
+              }
+
+              &:hover {
+                box-shadow: inset -20px -20px 50px rgba(114, 97, 72, 0.5);
+                box-shadow: 20px 20px 50px rgba(114, 97, 72, 0.5);
+              }
+            }
+
+            &.project1 {
+              .col {
+                background-color: #aea08b;
+                border-radius: 20px;
+                padding: 0 2rem;
+
+                @media (max-width: 1300px) {
+                  background-color: unset;
+                  border-radius: 0;
+                  padding: 0;
+                }
+              }
+            }
+
+            &.project2 {
+              gap: 1rem;
+              .col {
+                width: auto;
+                height: fit-content;
+                gap: 1rem;
+                img {
+                  height: fit-content;
+                  width: 100%;
+
+                  @media (max-width: 1024px) {
+                    height: fit-content;
+                    width: fit-content;
+                  }
+                }
+
+                @media (max-width: 1024px) {
+                  height: 100%;
+                  width: fit-content;
+                }
+
+                &.col-3 {
+                  @media (max-width: 1024px) {
+                    flex-direction: row;
+                  }
+                }
+              }
+            }
+
+            &.project3 {
+              gap: 1rem;
+              .col {
+                width: 50%;
+                height: auto;
+                gap: 1rem;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  border-radius: 3rem;
+                }
+              }
+            }
+          }
+        }
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

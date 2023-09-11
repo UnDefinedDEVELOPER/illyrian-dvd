@@ -1,0 +1,220 @@
+---
+import Button from "../../components/client/Button.svelte";
+---
+
+<div id="video-exp" class="flex flex-col">
+  <strong><h1 class="title">EXPERIENCE</h1></strong>
+  <div class="exp-content flex justify-evenly items-center gap-8">
+    <div class="left flex flex-col gap-10 justify-center">
+      <h2>5 YRS EXPERIENCE, 300+ VIDEOS</h2>
+      <div class="yt-exp flex gap-10 justify-between">
+        <div class="flex gap-2 h-min items-center">
+          <img src="/youtube.png" alt="" />
+          <strong>YouTube</strong>
+        </div>
+        <ul>
+          <li><strong>20k subscribers</strong></li>
+          <li><strong>3.5M views</strong></li>
+        </ul>
+      </div>
+      <div class="up-exp flex gap-10 justify-between">
+        <div class="flex gap-2 h-min items-center">
+          <img src="/upwork.png" alt="" />
+          <strong>Upwork</strong>
+        </div>
+        <ul>
+          <li><strong>100% success rate</strong></li>
+          <li><strong>4 total jobs</strong></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right flex flex-col items-end gap-8">
+      <h1><strong>Sounds interesting?</strong></h1>
+      <p>
+        Let's find out how to turn your best ideas into the best videos
+        possible!
+      </p>
+      <div class="cta-button">
+        <Button
+          bg="var(--primary)"
+          color="#fff"
+          text="Contact"
+          radius="20px"
+          uppercase={true}
+          bold={false}
+          client:only="svelte"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #video-exp {
+    height: 100%;
+    width: 100%;
+    /* background-image: url("/video-xp-bg.png"); */
+    /* background: linear-gradient(0deg, #fff 0%, #9b8964); */
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #fff 0%,
+      #dbd4c6 42.19%,
+      #9b8964 100%
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6rem 0;
+    color: #000;
+
+    strong h1.title {
+      font-size: 4rem;
+      font-weight: 800;
+      padding: 0 6rem;
+
+      /* @media (max-width: 1024px) {
+        font-size: 3rem;
+      } */
+      @media (max-width: 767px) {
+        font-size: 3rem;
+        text-align: center;
+      }
+      @media (max-width: 500px) {
+        padding: 0;
+        text-align: center;
+      }
+      @media (max-width: 320px) {
+        font-size: 2rem;
+        padding-top: 2rem;
+      }
+    }
+
+    .exp-content {
+      width: 100%;
+      flex-grow: 1;
+      padding: 0 6rem;
+
+      @media (max-width: 1400px) {
+        padding: 0 6rem;
+        gap: 4rem;
+      }
+      @media (max-width: 1024px) {
+        padding: 0 3rem;
+        gap: 4rem;
+      }
+      @media (max-width: 767px) {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1.5rem;
+      }
+
+      .left {
+        width: auto;
+
+        @media (max-width: 767px) {
+          gap: 1rem;
+        }
+
+        .yt-exp,
+        .up-exp {
+          @media (max-width: 1024px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          }
+          /* & > div.flex {
+          } */
+        }
+
+        h2 {
+          font-size: 2.25rem;
+          font-weight: 400;
+
+          @media (max-width: 1400px) {
+            font-size: 2rem;
+            text-align: center;
+          }
+          @media (max-width: 767px) {
+            font-size: 1.5rem;
+          }
+        }
+
+        strong {
+          font-size: 2.25rem;
+          @media (max-width: 1400px) {
+            font-size: 1.75rem;
+          }
+          @media (max-width: 767px) {
+            font-size: 1.5rem;
+          }
+        }
+
+        img {
+          width: 70px;
+          height: fit-content;
+
+          @media (max-width: 1400px) {
+            width: 50px;
+          }
+        }
+
+        li {
+          text-align: end;
+
+          @media (max-width: 1400px) {
+            height: min-content;
+          }
+          @media (max-width: 1024px) {
+            text-align: center;
+          }
+        }
+      }
+
+      .right {
+        color: #000;
+        font-size: 2.25rem;
+        text-align: right;
+        width: 40%;
+        max-width: 400px;
+
+        @media (max-width: 1400px) {
+          font-size: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+          width: 55%;
+        }
+        @media (max-width: 767px) {
+          width: 100%;
+          text-align: center;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        h1 strong {
+          font-weight: 700;
+          line-height: normal;
+          font-size: 2.25rem;
+
+          @media (max-width: 767px) {
+            font-size: 1.5rem;
+          }
+        }
+
+        p {
+          font-weight: 400;
+          line-height: normal;
+          font-size: 2.25rem;
+          @media (max-width: 767px) {
+            font-size: 1.5rem;
+          }
+        }
+
+        .cta-button {
+          font-size: 1.5rem;
+          width: 70%;
+        }
+      }
+    }
+  }
+</style>

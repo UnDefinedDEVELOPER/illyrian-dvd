@@ -15,13 +15,15 @@ import Header from "../components/Header.svelte";
   <MainLayout client:only="svelte">
     <Header color="#fff" client:only="svelte" />
     <div class="scroll">
-      <section><HeroHome /></section>
+      <section autofocus><HeroHome /></section>
       <section><AboutHome /></section>
       <section><DevHome /></section>
       <section><VideoHome /></section>
       <section><DesignHome /></section>
       <section><Testimonials /></section>
-      <section><Contact color1="#A7A7A5" color2="#161411" /></section>
+      <section>
+        <Contact color1="#A7A7A5" color2="#161411" text="white" />
+      </section>
     </div>
   </MainLayout>
 </BaseLayout>

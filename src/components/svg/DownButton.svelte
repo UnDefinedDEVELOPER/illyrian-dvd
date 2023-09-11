@@ -3,6 +3,7 @@
 
   const scroll = () => {
     document.querySelector(".scroll").scrollBy(0, heigth);
+    console.log("scrolled");
   };
 </script>
 
