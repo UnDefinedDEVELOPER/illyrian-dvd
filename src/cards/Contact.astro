@@ -2,6 +2,22 @@
 import FullLogo from "../components/assets/FullLogo.svelte";
 import Button from "../components/client/Button.svelte";
 
+export const prerender = false;
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+    console.log(`'${message}' sent by '${name}'`);
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+
 /* export let color1: string = "#000";
 export let color2: string = "#463129"; */
 let { color1, color2, percent, text } = Astro.props;
@@ -16,11 +32,10 @@ percent = "90%";
     <div class="left">
       <form
         class="text w-full h-full flex flex-col justify-center items-center gap-4"
-        action="$"
-        method="post"
+        method="POST"
       >
-        <input type="text" name="name" placeholder="Name" />
-        <input type="email" name="email" placeholder="Email" />
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
         <!-- <input
           type="text"
           class="message"
@@ -33,7 +48,8 @@ percent = "90%";
           id="message"
           cols="30"
           rows="10"
-          placeholder="Message"></textarea>
+          placeholder="Message"
+          required></textarea>
         <div class="cta-button">
           <Button
             bg="#161411"

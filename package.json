@@ -10,12 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^3.1.0",
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/svelte": "^4.0.2",
+    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vercel": "^4.0.5",
     "@fontsource-variable/montserrat": "^5.0.6",
     "@fontsource/montserrat": "^5.0.5",
     "@fontsource/righteous": "^5.0.5",
-    "astro": "^2.8.0",
+    "astro": "^3.0.13",
     "postcss": "^8.4.25",
     "postcss-preset-env": "^9.0.0",
     "svelte": "^4.0.5",
