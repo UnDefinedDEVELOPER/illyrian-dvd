@@ -18,30 +18,98 @@
       <img src="/col-logo-white.svg" alt="Illyrian DVD column logo" />
     </div>
   </div>
+  <!-- <div class="bg">
+    <svg
+      width="420"
+      height="540"
+      viewBox="0 0 420 540"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <ellipse cx="210" cy="270" rx="200" ry="260" fill="#161411"></ellipse>
+    </svg>
+  </div> -->
 </div>
 
 <style>
   #about-design {
     height: 100%;
     width: 100%;
-    background-color: #aea08b;
+
+    background-image: url("/design-work-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #aea08b;
+    background-image: url("Ellipse 9.svg");
+    background-position: right;
+    background-size: 45%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 1024px) {
+      background-size: 52%;
+    }
+    @media (max-width: 767px) {
+      background-image: url("Ellipse 9-1.svg");
+      background-position: bottom;
+      background-size: 110vh;
+    } */
+
     box-shadow:
-      inset 200px 0px 200px #726148,
-      inset -200px -200px 200px #726148;
+      inset 20px 0px 100px rgba(22, 20, 22, 0.4),
+      inset -20px -20px 100px rgba(22, 20, 22, 0.4);
     @media (max-width: 1024px) {
       box-shadow:
-        inset 0px 0px 100px #726148,
-        inset -10px 0px 100px #726148;
+        inset 0px 0px 100px rgba(22, 20, 22, 0.4),
+        inset -10px 0px 100px rgba(22, 20, 22, 0.4);
     }
+    position: relative;
 
     display: flex;
     flex-grow: 1;
+
+    /* .bg {
+      position: absolute;
+      height: 80vw;
+      top: 0;
+      right: -15%;
+      filter: blur(100px);
+      z-index: 1;
+
+      @media (max-width: 1024px) {
+        top: -10vh;
+        height: 120vh;
+        right: -50%;
+        filter: blur(100px);
+      }
+      @media (max-width: 767px) {
+        transform: rotate(90deg);
+        width: 200%;
+        height: auto;
+        top: 20vw;
+        right: -50%;
+        filter: blur(50px);
+      }
+
+      @media (max-width: 400px) {
+        height: 200%;
+        width: auto;
+        top: -20vh;
+        right: -200%;
+        filter: blur(50px);
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    } */
 
     .about-content {
       padding: 4rem;
       color: #fff;
       width: 100%;
-      letter-spacing: 0.5px;
+      /* letter-spacing: 0.5px; */
+      z-index: 2;
 
       @media (max-width: 1300px) {
         letter-spacing: initial;
@@ -58,7 +126,11 @@
       }
 
       .left {
-        width: 50%;
+        width: 40%;
+
+        @media (max-width: 1300px) {
+          width: 40%;
+        }
 
         @media (max-width: 767px) {
           width: 100%;
@@ -66,12 +138,15 @@
         }
 
         p strong {
-          font-size: 2.25rem;
+          font-size: 2rem;
           font-weight: 700;
           line-height: normal;
 
           @media (max-width: 1300px) {
             font-size: 1.75rem;
+          }
+          @media (max-width: 767px) {
+            font-size: 1.5rem;
           }
           @media (max-width: 500px) {
             font-size: 1.25rem;
@@ -80,7 +155,7 @@
         }
 
         p {
-          font-size: 2rem;
+          font-size: 1.75rem;
           font-weight: 300;
           @media (max-width: 1300px) {
             font-size: 1.5rem;
@@ -88,6 +163,7 @@
           @media (max-width: 767px) {
             width: 70%;
             margin: 0 auto;
+            font-size: 1.375rem;
           }
           @media (max-width: 500px) {
             font-size: 1.25rem;
@@ -99,13 +175,16 @@
         ul {
           list-style: initial;
           list-style-position: inside;
-          font-size: 2.25rem;
+          font-size: 2rem;
           font-weight: 300;
           line-height: 130%;
           margin-top: 3rem;
 
           @media (max-width: 1300px) {
             font-size: 1.75rem;
+          }
+          @media (max-width: 1024px) {
+            font-size: 1.5rem;
           }
           @media (max-width: 500px) {
             font-size: 1.25rem;
@@ -114,11 +193,8 @@
           li {
             padding-left: 2rem;
 
-            @media (max-width: 1300px) {
-              font-size: 1.5rem;
-            }
-
             @media (max-width: 500px) {
+              padding-left: 0;
               margin-bottom: 0.5rem;
             }
           }
@@ -144,7 +220,7 @@
           padding-top: 2rem;
 
           @media (max-width: 1300px) {
-            max-height: 450px;
+            max-height: 350px;
           }
 
           @media (max-width: 1024px) {
@@ -152,6 +228,7 @@
           }
 
           @media (max-width: 767px) {
+            padding-top: 4rem;
             height: 100%;
             width: fit-content;
             margin: 0 auto;

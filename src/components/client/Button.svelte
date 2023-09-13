@@ -6,11 +6,13 @@
   export let bold: boolean | undefined;
   export let uppercase: boolean | undefined;
   export let submit: boolean;
+  export let href: string;
 
   /* console.log(bg, color, text, bold, uppercase); */
 </script>
 
-<div
+<a
+  {href}
   class="w-full h-auto"
   style="--bg-color: {bg}; --color: {color}; --radius: {radius}"
 >
@@ -24,7 +26,7 @@
       {text}
     {/if}
   </button>
-</div>
+</a>
 
 <!-- style="background-color: {bg}; color: {color}; border-radius: {radius}" -->
 <style lang="postcss">

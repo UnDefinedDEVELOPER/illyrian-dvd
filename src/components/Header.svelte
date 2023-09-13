@@ -31,16 +31,11 @@
       >
     </nav>
     <div class="static-nav">
-      <a href="/#about-card">ABOUT</a>
+      <a href="http://localhost:3000/#about-card">ABOUT</a>
       <a href="#contact-card">CONTACT</a>
     </div>
   {:else}
-    <div
-      style={showMenu
-        ? "justify-content: center; gap: 2rem;"
-        : "justify-content: space-between;"}
-      class="title flex w-full"
-    >
+    <div class="title flex w-full">
       <h1><a href="/">ILLYRIAN</a></h1>
       <button
         on:click={() => {
@@ -58,19 +53,23 @@
       </button>
     </div>
     {#if showMenu}
-      <nav class="w-full flex justify-center gap-8">
-        <a
-          class={activePage == "development" ? "bolder" : ""}
-          href="/development">DEV</a
-        >
-        <a class={activePage == "video" ? "bolder" : ""} href="/video">VIDEO</a>
-        <a class={activePage == "design" ? "bolder" : ""} href="/design"
-          >DESIGN</a
-        >
-      </nav>
-      <div class="static-nav w-full flex justify-center gap-8">
-        <a href="#about-card">ABOUT</a>
-        <a href="#contact-card">CONTACT</a>
+      <div class="nav">
+        <nav class="w-full flex justify-center gap-8">
+          <a
+            class={activePage == "development" ? "bolder" : ""}
+            href="/development">DEV</a
+          >
+          <a class={activePage == "video" ? "bolder" : ""} href="/video"
+            >VIDEO</a
+          >
+          <a class={activePage == "design" ? "bolder" : ""} href="/design"
+            >DESIGN</a
+          >
+        </nav>
+        <div class="static-nav w-full flex justify-center gap-8">
+          <a href="#about-card">ABOUT</a>
+          <a href="#contact-card">CONTACT</a>
+        </div>
       </div>
     {/if}
   {/if}
@@ -80,32 +79,57 @@
 
 <style lang="postcss">
   header {
-    /* --color: #fff; */
+    height: 60px;
+    width: 100%;
+
+    margin: auto;
+    padding: 1rem 5% 1rem 5%;
+
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    width: 100%;
-    margin: auto;
-    padding: 1rem 5% 1rem 5%;
-    position: absolute;
+
     color: var(--color);
-    z-index: 100;
-    overflow: hidden;
+
     transition: 0.4s all ease-in-out;
 
     @media (min-width: 1440px) {
       height: 80px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 2rem;
+
+      .title {
+        justify-content: space-between;
+      }
+
+      .nav {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6rem;
+
+        & > nav,
+        & > .static-nav {
+          flex-direction: column;
+          align-items: center;
+
+          a {
+            font-size: 2.5rem;
+          }
+        }
+      }
     }
 
-    .title {
+    .title,
+    .nav {
       z-index: 100;
     }
 
@@ -116,12 +140,8 @@
       width: 100%;
       height: 100%;
       backdrop-filter: blur(70px);
+      z-index: 1;
     }
-
-    /* h1,
-        a {
-            text-shadow: 1px 1px 5px #000, 1px 1px 5px #000, 1px 1px 5px #000;
-        } */
 
     h1 {
       font-family: "Righteous", sans-serif;
@@ -149,7 +169,6 @@
         font-size: 1.25rem;
         font-weight: 300;
         transition: 0.25s all ease-in;
-        /* background-color: var(--primary); */
 
         &:hover {
           color: var(--primary);

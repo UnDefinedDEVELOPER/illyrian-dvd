@@ -59,7 +59,7 @@
           <img src="/illustrator.png" alt="illustrator" />
           <img src="/figma.png" alt="figma" />
         </div>
-        <div class="buttons flex gap-2 items-center">
+        <div class="buttons flex gap-2 items-center justify-center">
           <div class="cta-button">
             <Button
               bg="#000"
@@ -67,6 +67,8 @@
               text="Read more"
               radius="20px"
               uppercase={false}
+              submit={false}
+              href="/#contact-card"
               bold={false}
             />
           </div>
@@ -77,6 +79,8 @@
               text="Watch example"
               radius="20px"
               uppercase={false}
+              submit={false}
+              href="https://www.youtube.com/watch?v=CIAgfY0fi08"
               bold={false}
             />
           </div>
@@ -108,14 +112,16 @@
           <img src="/premiere.png" alt="premiere" />
           <img src="/photoshop.png" alt="photoshop" />
         </div>
-        <div class="buttons flex gap-2 items-center">
+        <div class="buttons flex gap-2 items-center justify-center">
           <div class="cta-button">
             <Button
               bg="#000"
               color="#fff"
-              text="Read more"
+              text="Contact"
               radius="20px"
               uppercase={false}
+              submit={false}
+              href="/#contact-card"
               bold={false}
             />
           </div>
@@ -126,6 +132,8 @@
               text="Watch example"
               radius="20px"
               uppercase={false}
+              submit={false}
+              href="https://www.youtube.com/watch?v=b4i6EpmaMe4"
               bold={false}
             />
           </div>
@@ -156,27 +164,32 @@
           <img src="/premiere.png" alt="premiere" />
           <img src="/photoshop.png" alt="photoshop" />
         </div>
-        <div class="buttons flex gap-2 items-center">
+        <div class="buttons flex gap-2 items-center justify-center">
           <div class="cta-button">
             <Button
               bg="#000"
               color="#fff"
-              text="Read more"
+              text="Contact"
               radius="20px"
               uppercase={false}
+              submit={false}
+              href="/#contact-card"
               bold={false}
             />
           </div>
-          <div class="cta-button">
+          <!-- <div class="cta-button">
             <Button
               bg="#000"
               color="#fff"
               text="Watch example"
               radius="20px"
               uppercase={false}
+              submit={false}
+               href="https://www.youtube.com/watch?v=b4i6EpmaMe4"
               bold={false}
+              
             />
-          </div>
+          </div> -->
         </div>
       </footer>
     {/if}
@@ -345,6 +358,10 @@
         box-shadow: inset 0px -20px 50px rgba(0, 0, 0, 0.2);
         padding: 2rem 6rem;
 
+        .cta-button {
+          width: 12rem;
+        }
+
         @media (max-width: 1400px) {
           padding: 2rem 4rem;
         }
@@ -360,6 +377,11 @@
 
           .buttons {
             height: 40%;
+            width: 100%;
+
+            .cta-button {
+              width: 50%;
+            }
           }
         }
         @media (max-width: 500px) {

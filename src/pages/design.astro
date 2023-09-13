@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.svelte";
 import Header from "../components/Header.svelte";
 import HeroDesign from "../cards/design/HeroDesign.astro";
 import AboutDesign from "../cards/design/AboutDesign.astro";
-import WorkDesign from "../cards/design/WorkDesign.astro";
+import WorkDesign from "../cards/design/WorkDesign.svelte";
 import Contact from "../cards/Contact.astro";
 ---
 
@@ -14,9 +14,9 @@ import Contact from "../cards/Contact.astro";
     <div class="scroll">
       <section><HeroDesign /></section>
       <section><AboutDesign /></section>
-      <section><WorkDesign /></section>
+      <section><WorkDesign client:load /></section>
       <section>
-        <Contact color1="#aea08b" color2="#726148" text="white" />
+        <Contact color1="#161411" color2="#726148" text="white" />
       </section>
     </div>
   </MainLayout>
@@ -30,7 +30,7 @@ import Contact from "../cards/Contact.astro";
     position: relative;
     z-index: 1;
     height: 100%;
-    background-color: #aea08b;
+    background-color: #161411;
 
     & > section {
       scroll-snap-align: center;
@@ -132,7 +132,7 @@ import Contact from "../cards/Contact.astro";
     position: relative;
 
     &:hover {
-      box-shadow: 0 15px 50px rgb(119, 110, 95);
+      box-shadow: 0 25px 100px rgba(0, 0, 0, 0.8);
     }
 
     @media (max-width: 1440px) {
