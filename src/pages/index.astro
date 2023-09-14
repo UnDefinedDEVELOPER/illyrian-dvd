@@ -11,6 +11,14 @@ import Contact from "../cards/Contact.astro";
 import Header from "../components/Header.svelte";
 ---
 
+<script is:inline>
+console.log("hello");
+console.log(window.innerHeight);
+window.onresize = () => {
+  console.log(window.innerHeight);
+};
+</script>
+
 <BaseLayout>
   <MainLayout client:only="svelte">
     <Header color="#fff" client:only="svelte" />

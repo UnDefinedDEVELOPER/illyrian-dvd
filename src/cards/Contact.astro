@@ -4,7 +4,7 @@ import Button from "../components/client/Button.svelte";
 
 export const prerender = false;
 
-if (Astro.request.method === "POST") {
+/* if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
     const name = data.get("name");
@@ -16,7 +16,7 @@ if (Astro.request.method === "POST") {
       console.error(error.message);
     }
   }
-}
+} */
 
 /* export let color1: string = "#000";
 export let color2: string = "#463129"; */
