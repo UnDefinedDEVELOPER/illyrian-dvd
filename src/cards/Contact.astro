@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 import smallFacebookLogo from "../assets/img/facebook_logo_small.webp";
 import smallLinkedinLogo from "../assets/img/linkedin_logo_small.png";
 
-const cv = new URL("../assets/CV_eng.pdf", Astro.url);
+/* const cv = new URL("../assets/CV_eng.pdf", Astro.url); */
 
 let { color1, color2, percent, text } = Astro.props;
 percent = "90%";
@@ -122,7 +122,7 @@ percent = "90%";
             uppercase={false}
             bold={false}
             submit={false}
-            href={cv.toString()}
+            href="/CV_eng.pdf"
             client:load
           />
         </div>
