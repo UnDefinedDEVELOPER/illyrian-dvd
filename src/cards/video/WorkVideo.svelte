@@ -64,7 +64,7 @@
             <Button
               bg="#000"
               color="#fff"
-              text="Read more"
+              text="Contact"
               radius="20px"
               uppercase={false}
               submit={false}

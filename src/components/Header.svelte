@@ -21,7 +21,7 @@
 >
   <!-- <div class="title"> -->
   {#if width > 767}
-    <h1><a href="/">ILLYRIAN</a></h1>
+    <h1><a href="./">ILLYRIAN</a></h1>
     <nav>
       <a class={activePage == "development" ? "bolder" : ""} href="/development"
         >DEV</a
@@ -31,7 +31,7 @@
       >
     </nav>
     <div class="static-nav">
-      <a href="http://localhost:3000/#about-card">ABOUT</a>
+      <a href="./#about-card">ABOUT</a>
       <a href="#contact-card">CONTACT</a>
     </div>
   {:else}
@@ -67,8 +67,18 @@
           >
         </nav>
         <div class="static-nav w-full flex justify-center gap-8">
-          <a href="#about-card">ABOUT</a>
-          <a href="#contact-card">CONTACT</a>
+          <a
+            on:click={() => {
+              showMenu = false;
+            }}
+            href="#about-card">ABOUT</a
+          >
+          <a
+            on:click={() => {
+              showMenu = false;
+            }}
+            href="#contact-card">CONTACT</a
+          >
         </div>
       </div>
     {/if}

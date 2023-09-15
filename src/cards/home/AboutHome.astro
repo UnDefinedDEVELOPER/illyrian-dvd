@@ -2,6 +2,7 @@
 import AboutName from "../../components/svg/AboutName.svelte";
 import AboutImages from "../../components/svg/AboutImages.svelte";
 import Button from "../../components/client/Button.svelte";
+const cv = new URL("../assets/CV_eng.pdf", Astro.url);
 ---
 
 <div id="about-card">
@@ -43,6 +44,8 @@ import Button from "../../components/client/Button.svelte";
           radius="1.43rem"
           uppercase={false}
           bold={false}
+          submit={false}
+          href={cv.toString()}
           client:load
         />
       </div>

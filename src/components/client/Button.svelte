@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   export let bg: string;
   export let color: string;
   export let text: string;
@@ -7,26 +9,40 @@
   export let uppercase: boolean | undefined;
   export let submit: boolean;
   export let href: string;
-
-  /* console.log(bg, color, text, bold, uppercase); */
 </script>
 
-<a
-  {href}
-  class="w-full h-auto"
-  style="--bg-color: {bg}; --color: {color}; --radius: {radius}"
->
-  <button
-    type={submit ? "submit" : "button"}
-    class="{bold ? 'bold' : ''} {uppercase ? 'uppercase' : ''}"
+{#if text == "Download CV"}
+  <a
+    {href}
+    class="w-full h-auto"
+    style="--bg-color: {bg}; --color: {color}; --radius: {radius}"
+    download
   >
-    {#if text == ""}
-      <slot />
-    {:else}
+    <button
+      type={submit ? "submit" : "button"}
+      class="{bold ? 'bold' : ''} {uppercase ? 'uppercase' : ''}"
+    >
       {text}
-    {/if}
-  </button>
-</a>
+    </button>
+  </a>
+{:else}
+  <a
+    {href}
+    class="w-full h-auto"
+    style="--bg-color: {bg}; --color: {color}; --radius: {radius}"
+  >
+    <button
+      type={submit ? "submit" : "button"}
+      class="{bold ? 'bold' : ''} {uppercase ? 'uppercase' : ''}"
+    >
+      {#if text == ""}
+        <slot />
+      {:else}
+        {text}
+      {/if}
+    </button>
+  </a>
+{/if}
 
 <!-- style="background-color: {bg}; color: {color}; border-radius: {radius}" -->
 <style lang="postcss">

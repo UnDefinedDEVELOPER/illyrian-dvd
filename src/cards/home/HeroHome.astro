@@ -1,6 +1,8 @@
 ---
 import Button from "../../components/client/Button.svelte";
 import TextLogo from "../../components/assets/TextLogo.svelte";
+import { Image } from "astro:assets";
+import Logo from "../../assets/img/logo.png";
 ---
 
 <div id="hero-card">
@@ -40,7 +42,8 @@ import TextLogo from "../../components/assets/TextLogo.svelte";
         </div>
       </div>
       <div class="logo">
-        <img src="/logo.png" width="650" height="720" alt="" />
+        <Image src={Logo} alt="logotype" width="650" height="720" />
+        <!-- <img src="/logo.png" width="650" height="720" alt="" /> -->
       </div>
     </div>
   </div>
