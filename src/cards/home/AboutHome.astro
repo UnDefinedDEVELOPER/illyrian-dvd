@@ -2,7 +2,7 @@
 import AboutName from "../../components/svg/AboutName.svelte";
 import AboutImages from "../../components/svg/AboutImages.svelte";
 import Button from "../../components/client/Button.svelte";
-/* const cv = new URL("../assets/CV_eng.pdf", Astro.url); */
+import CV from "../assets/CV_eng.pdf";
 import { Image } from "astro:assets";
 import MePic from "../../assets/img/me_pic.png";
 ---
@@ -47,7 +47,7 @@ import MePic from "../../assets/img/me_pic.png";
           uppercase={false}
           bold={false}
           submit={false}
-          href="/CV_eng.pdf"
+          href={CV}
           client:load
         />
       </div>

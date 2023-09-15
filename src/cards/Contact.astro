@@ -4,6 +4,7 @@ import Button from "../components/client/Button.svelte";
 import { Image } from "astro:assets";
 import smallFacebookLogo from "../assets/img/facebook_logo_small.webp";
 import smallLinkedinLogo from "../assets/img/linkedin_logo_small.png";
+import CV from "../assets/CV_eng.pdf";
 
 /* const cv = new URL("../assets/CV_eng.pdf", Astro.url); */
 
@@ -47,6 +48,7 @@ percent = "90%";
             bold={false}
             uppercase={false}
             submit={true}
+            href=""
             client:load
           />
         </div>
@@ -122,7 +124,7 @@ percent = "90%";
             uppercase={false}
             bold={false}
             submit={false}
-            href="/CV_eng.pdf"
+            href={CV}
             client:load
           />
         </div>
