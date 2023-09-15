@@ -16,7 +16,7 @@
     {href}
     class="w-full h-auto"
     style="--bg-color: {bg}; --color: {color}; --radius: {radius}"
-    download
+    target="_blank"
   >
     <button
       type={submit ? "submit" : "button"}

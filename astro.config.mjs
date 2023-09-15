@@ -6,4 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
    integrations: [svelte(), tailwind()],
    site: 'https://illyriandvd.vercel.app',
+   assets: ['src/assets', '**/*.pdf']
 });
