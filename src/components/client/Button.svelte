@@ -17,6 +17,7 @@
     class="w-full h-auto"
     style="--bg-color: {bg}; --color: {color}; --radius: {radius}"
     target="_blank"
+    download
   >
     <button
       type={submit ? "submit" : "button"}
