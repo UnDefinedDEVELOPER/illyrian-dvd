@@ -16,6 +16,10 @@
         {height}
         alt="logotype"
     />
+    <!-- {#if color == "white"}
+    {:else}
+        <img class="logo" src={logo.toString()} {width} {height} alt="logotype" />
+    {/if} -->
 {/if}
 
 <style>

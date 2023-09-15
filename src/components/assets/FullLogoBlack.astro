@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import blackLogo from "../../assets/img/full_logo_black.png";
+
+const { width, height } = Astro.props;
+---
+
+<Image
+    class={"logo"}
+    src={blackLogo}
+    alt="Page Full Logo black"
+    width={width}
+    height={height}
+/>
+
+<style>
+    .logo {
+        height: 100%;
+        width: auto;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+</style>

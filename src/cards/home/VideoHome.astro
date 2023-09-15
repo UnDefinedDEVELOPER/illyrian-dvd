@@ -1,6 +1,8 @@
 ---
-import FullLogo from "../../components/assets/FullLogo.svelte";
+import FullLogo from "../../components/assets/FullLogoBlack.astro";
 import Button from "../../components/client/Button.svelte";
+import { Image } from "astro:assets";
+import videoStack from "../../assets/img/video_stack.png";
 ---
 
 <div id="video-card">
@@ -38,13 +40,18 @@ import Button from "../../components/client/Button.svelte";
         <li>motion graphics</li>
         <li>VFX production</li>
       </ul>
-      <img src="/video-stack.png" alt="My tools for video work" />
+      <Image
+        class="video-stack"
+        src={videoStack}
+        alt="My tools for video work"
+      />
+      <!-- <img src="/video-stack.png" alt="My tools for video work" /> -->
     </div>
   </div>
   <footer class="w-full flex justify-between items-center">
     <h1>VIDEO</h1>
     <div class="img flex h-full align-center">
-      <FullLogo width="350" height="180" color="black" client:load />
+      <FullLogo width="350" height="180" />
     </div>
   </footer>
 </div>
@@ -186,7 +193,7 @@ import Button from "../../components/client/Button.svelte";
           }
         }
 
-        img {
+        .video-stack {
           @media (max-width: 1440px) {
             max-width: 70%;
             height: auto;

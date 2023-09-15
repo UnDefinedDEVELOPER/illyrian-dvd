@@ -1,14 +1,17 @@
 ---
-import FullLogo from "../components/assets/FullLogo.svelte";
-import Stars from "../components/svg/Stars.svelte";
+import FullLogo from "../components/assets/FullLogoBlack.astro";
+import Stars from "../components/svg/Stars.astro";
 import Button from "../components/client/Button.svelte";
+import { Image } from "astro:assets";
+import linkedinLogo from "../assets/img/linkedin_logo.png";
+import upworkLogo from "../assets/img/upwork_logo.png";
 ---
 
 <div id="testimonials-card">
   <header class="w-full flex justify-between items-center">
     <h1>TESTIMONIALS</h1>
     <div class="img flex h-full align-center">
-      <FullLogo width="350" height="180" color="black" client:load />
+      <FullLogo width="350" height="180" />
     </div>
   </header>
 
@@ -89,21 +92,33 @@ import Button from "../components/client/Button.svelte";
   <footer class="w-full flex justify-between items-center">
     <h1>Truthfully submitted feedback on:</h1>
     <div class="img flex h-full align-center gap-8">
-      <a href="https://www.linkedin.com/in/knightofillyria/"
-        ><img
+      <a href="https://www.linkedin.com/in/knightofillyria/">
+        <Image
+          class="icon"
+          src={linkedinLogo}
+          height="120"
+          alt="My LinkedIn profile"
+        />
+        <!-- <img
           src="/linkedin-logo.png"
           height="120"
           width="auto"
           alt="My LinkedIn profile"
-        /></a
-      >
-      <a href="https://www.upwork.com/freelancers/~018eb1b3dc91d537d9"
-        ><img
+        /> -->
+      </a>
+      <a href="https://www.upwork.com/freelancers/~018eb1b3dc91d537d9">
+        <Image
+          class="icon"
+          src={upworkLogo}
+          height="120"
+          alt="My Upwork profile"
+        />
+        <!-- <img
           src="/upwork-logo.png"
           height="120"
           width="auto"
           alt="My Upwork profile"
-        /></a
+        /> --></a
       >
     </div>
   </footer>
@@ -342,7 +357,7 @@ import Button from "../components/client/Button.svelte";
           display: flex;
           align-items: center;
 
-          img {
+          .icon {
             max-height: 100%;
             width: auto;
           }

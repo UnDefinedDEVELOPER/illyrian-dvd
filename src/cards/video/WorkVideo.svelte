@@ -8,10 +8,14 @@
   <div
     class="work-content flex flex-col align-center"
     style="{tab == 1
-      ? "background-image: url('/tab-1.svg'); --color: #fff;"
+      ? 'background: radial-gradient(75% 75% at -1% 92%, #1F1505 0%, #564D3F00 100%),radial-gradient(75% 75% at 97% 1%, #1F1505 0%, #564D3F 100%); --color: #fff;'
       : ''} 
-      {tab == 2 ? "background-image: url('/tab-2.svg'); --color: #000;" : ''}
-      {tab == 3 ? "background-image: url('/tab-3.svg'); --color: #fff;" : ''}"
+      {tab == 2
+      ? 'background: radial-gradient(75% 75% at -1% 92%, #D1A437FF 18%, #564D3F00 100%),radial-gradient(75% 75% at 97% 1%, #D1A437FF 24%, #F9D690FF 100%); --color: #000;'
+      : ''}
+      {tab == 3
+      ? 'background: radial-gradient(75% 75% at -1% 92%, #594D32 -15%, #564D3F00 77%),radial-gradient(75% 75% at 100% 1%, #594D32 -15%, #110C05FF 80%); --color: #fff;'
+      : ''}"
   >
     <nav class="flex gap-4 justify-center">
       <button

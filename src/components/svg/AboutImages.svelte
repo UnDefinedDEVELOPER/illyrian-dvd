@@ -7,8 +7,8 @@
 <svelte:window bind:innerWidth={width} />
 
 <div class="img flex flex-col justify-center items-center gap-4">
-  <!-- <img class="me_pic" src="/me_pic.png" width="420" height="438" /> -->
-  <Image src={MePic} alt="A picture of me" width="420" height="438" />
+  <img class="me_pic" src="/me_pic.png" width="420" height="438" />
+  <!-- <Image src={MePic} alt="A picture of me" width="420" height="438" /> -->
   <!-- {#if width > 1700}
         <img class="logo" src="/full_logo_white.png" width="420" height="216" />
     {/if} -->
@@ -49,7 +49,7 @@
       }
     }
 
-    img.logo {
+    /* img.logo {
       height: max-content;
       width: 80%;
 
@@ -58,6 +58,6 @@
         width: 40%;
         height: auto;
       }
-    }
+    } */
   }
 </style>

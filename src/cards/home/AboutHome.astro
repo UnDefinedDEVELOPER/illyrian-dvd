@@ -3,6 +3,8 @@ import AboutName from "../../components/svg/AboutName.svelte";
 import AboutImages from "../../components/svg/AboutImages.svelte";
 import Button from "../../components/client/Button.svelte";
 const cv = new URL("../assets/CV_eng.pdf", Astro.url);
+import { Image } from "astro:assets";
+import MePic from "../../assets/img/me_pic.png";
 ---
 
 <div id="about-card">
@@ -50,7 +52,17 @@ const cv = new URL("../assets/CV_eng.pdf", Astro.url);
         />
       </div>
     </div>
-    <AboutImages client:load />
+    <!-- <AboutImages client:load /> -->
+    <div class="img flex flex-col justify-center items-center gap-4">
+      <!-- <img class="me_pic" src="/me_pic.png" width="420" height="438" /> -->
+      <Image
+        class={"me_pic"}
+        src={MePic}
+        alt="A picture of me"
+        width="420"
+        height="438"
+      />
+    </div>
   </div>
 </div>
 
@@ -138,6 +150,41 @@ const cv = new URL("../assets/CV_eng.pdf", Astro.url);
         }
         @media (max-width: 500px) {
           width: 100%;
+        }
+      }
+    }
+
+    .img {
+      width: 40%;
+      height: 100%;
+
+      @media (min-width: 1441px) {
+        min-height: 350px;
+      }
+      @media (max-width: 1440px) {
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        width: 100%;
+        height: 30%;
+      }
+      @media (max-width: 320px) {
+        height: 20%;
+      }
+
+      img.me_pic {
+        height: 60%;
+        width: max-content;
+        border-radius: 110px;
+        filter: drop-shadow(-5px 5px 25px rgba(0, 0, 0, 0.5));
+
+        @media (max-width: 1440px) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 50%;
+          height: 100%;
+          width: max-content;
         }
       }
     }

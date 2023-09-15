@@ -1,14 +1,15 @@
 ---
 import Button from "../../components/client/Button.svelte";
-import DevStack from "../../components/assets/DevStack.svelte";
-import FullLogo from "../../components/assets/FullLogo.svelte";
+import FullLogo from "../../components/assets/FullLogoWhite.astro";
+import { Image } from "astro:assets";
+import designStack from "../../assets/img/design_stack.png";
 ---
 
 <div id="design-card">
   <header class="w-full flex justify-between items-center">
     <h1>DESIGN</h1>
     <div class="img flex h-full align-center">
-      <FullLogo width="350" height="180" color="white" client:load />
+      <FullLogo width="350" height="180" />
     </div>
   </header>
   <div class="content">
@@ -37,7 +38,7 @@ import FullLogo from "../../components/assets/FullLogo.svelte";
       </div>
     </div>
     <div class="img flex justify-center items-center">
-      <img src="/design-stack.png" alt="My tools for design" />
+      <Image class="design-stack" src={designStack} alt="My tools for design" />
     </div>
   </div>
 </div>
@@ -233,7 +234,7 @@ import FullLogo from "../../components/assets/FullLogo.svelte";
           align-items: end;
         }
 
-        img {
+        .design-stack {
           max-height: 80%;
           width: auto;
 

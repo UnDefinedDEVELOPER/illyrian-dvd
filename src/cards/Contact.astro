@@ -1,8 +1,10 @@
 ---
 import FullLogo from "../components/assets/FullLogo.svelte";
 import Button from "../components/client/Button.svelte";
+import { Image } from "astro:assets";
+import smallFacebookLogo from "../assets/img/facebook_logo_small.webp";
+import smallLinkedinLogo from "../assets/img/linkedin_logo_small.png";
 
-export const prerender = false;
 const cv = new URL("../assets/CV_eng.pdf", Astro.url);
 
 let { color1, color2, percent, text } = Astro.props;
@@ -66,8 +68,14 @@ percent = "90%";
             client:load
           >
             <div class="flex justify-center items-center gap-4">
-              <img
+              <!-- <img
                 src="/linkedin-logo-small.png"
+                width="30"
+                height="30"
+                alt="LinkedIn logo"
+              /> -->
+              <Image
+                src={smallLinkedinLogo}
                 width="30"
                 height="30"
                 alt="LinkedIn logo"
@@ -89,8 +97,14 @@ percent = "90%";
             client:load
           >
             <div class="flex justify-center items-center gap-4">
-              <img
+              <!-- <img
                 src="/facebook-logo-small.webp"
+                width="30"
+                height="30"
+                alt="LinkedIn logo"
+              /> -->
+              <Image
+                src={smallFacebookLogo}
                 width="30"
                 height="30"
                 alt="LinkedIn logo"

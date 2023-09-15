@@ -1,14 +1,15 @@
 ---
 import Button from "../../components/client/Button.svelte";
-import DevStack from "../../components/assets/DevStack.svelte";
-import FullLogo from "../../components/assets/FullLogo.svelte";
+import DevStack from "../../components/assets/DevStack.astro";
+import FullLogo from "../../components/assets/FullLogoWhite.astro";
 ---
 
 <div id="dev-card" class="flex flex-col justify-between">
   <header class="flex justify-between items-center">
     <h1>DEVELOPMENT</h1>
     <div class="img flex h-full align-center">
-      <FullLogo width="350" height="180" color="white" client:load />
+      <!-- <FullLogo width="350" height="180" color="white" client:load /> -->
+      <FullLogo width="350" height="180" />
     </div>
   </header>
   <div>
@@ -150,6 +151,7 @@ import FullLogo from "../../components/assets/FullLogo.svelte";
           margin: 0 auto;
           margin-bottom: 1.5rem;
           text-align: center;
+          height: 40%;
         }
 
         @media (max-width: 500px) {
@@ -181,15 +183,20 @@ import FullLogo from "../../components/assets/FullLogo.svelte";
         }
       }
       .image {
-        align-self: end;
+        align-self: center;
         width: 50%;
         height: 100%;
+        max-height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         /* background-color: #fff; */
 
         @media (max-width: 1024px) {
           height: 100%;
           width: 100%;
           align-self: start;
+          height: 60%;
         }
 
         @media (max-width: 500px) {
