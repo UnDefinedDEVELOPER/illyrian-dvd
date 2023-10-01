@@ -59,8 +59,17 @@
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 767px) {
+      height: 50px;
+      width: 50px;
+      svg {
+        width: 15px;
+        height: 25px;
+      }
+    }
+
     @media (max-width: 500px) {
-      height: 60px;
+      height: 50px;
       width: 50px;
       svg {
         width: 15px;
