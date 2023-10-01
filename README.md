@@ -1,42 +1,13 @@
-# Astro Starter Kit: Basics
+# Illyrian DVD - Development, Video, Design
 
-```
-npm create astro@latest -- --template basics
-```
+**Illyrian DVD** is my personal portfolio, even though it's branded. This website was created with the purpose of _developing great solutions, solving problems and doing high-quality work for my clients_. Illyrian DVD showcases how I can help you grow your business, promote your brand and develop excellent products.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[View Website](https://illyriandvd.vercel.app/)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+illyrianDVD is supposed to be a showcase of a fast and well-coded front-end project using modern web frameworks like AstroJS, Svelte, PostCSS and Vercel. The website is statically generated with the exception of specific UI components ('Astro Islands') that are hydrated after mounting. For more info check out [Astro documentation](https://docs.astro.build).
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -49,6 +20,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
